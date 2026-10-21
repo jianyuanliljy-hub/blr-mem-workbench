@@ -1,0 +1,27 @@
+{
+  "workflow_run_id": 39632183302,
+  "workflow_url": "https://github.com/jianyuanliljy-hub/blr-mem-workbench/actions/runs/39632183302",
+  "workflow_commit": "e92d73506b7ec62942f46c9126054a386338af72",
+  "downloaded_under_original_tag": "v0.1.0-dev1",
+  "current_distribution_tag": "v0.1.0-dev1-r1",
+  "asset": {
+    "name": "BLR_MEM_Workbench_0.1.0-dev1_Windows_x64.zip",
+    "bytes": 110163272,
+    "sha256": "d1b3f18991d137274e19ed11e54a8bcb2ddc531f3de77defdf3c1980a2702ed7"
+  },
+  "runner_os": "Microsoft Windows Server 2025 Datacenter 10.0.26100",
+  "runner_image": "windows-2025-vs2026 / 20261007.264.1",
+  "execution_environment": "NATIVE_WINDOWS",
+  "github_conclusion": "success",
+  "downloaded_sha256_check": "PASS",
+  "commands_completed": 20,
+  "gui_dimensions": [
+    1,
+    2
+  ],
+  "binary_archive_changed_for_source_revision": false,
+  "validation_receipt": "windows_native_validation.json",
+  "gui_receipt": "windows_native_gui_flow.json",
+  "windows_10_11_human_acceptance": "NOT_RUN",
+  "scientific_acceptance": "NOT_ASSESSED"
+}

@@ -41,10 +41,11 @@ def main():
         "tests/*.py",
         "tools/*.py",
         "tools/*.c",
-        "docs/*.md",
-        "docs/*.png",
-        "docs/*.csv",
-        "docs/*.json",
+        "docs/**/*.md",
+        "docs/**/*.png",
+        "docs/**/*.csv",
+        "docs/**/*.json",
+        "docs/**/*.xml",
         ".github/workflows/*.yml",
     ]
     files = {path for pattern in patterns for path in root.glob(pattern) if path.is_file()}

@@ -29,6 +29,7 @@
 | macOS 源码 | 60/60 单元与负测试；真实 Tk 主循环中的两维生成、MEM、检测、报告、表单和错误恢复 |
 | macOS arm64 成品 | 两维 GUI/CLI、批量、扫描、报告、临时签名完整性；251 个 Mach-O 文件未发现非系统绝对路径依赖 |
 | Windows x64 成品，Wine 11.18 | 实际加载 Windows Python 与科学 DLL；EXE、两维快捷入口、GUI/CLI、批量/扫描续跑和报告，共 20 个操作检查通过 |
+| 同一 Windows ZIP，原生 Windows Server 2025 runner | 从私有 Release 下载、核对 SHA-256，在中文和空格路径解压后完成 20 个操作检查；两维 GUI 流程、错误恢复和表单往返均通过；[收据](receipts/windows_native_validation.json) |
 | 真实 Windows 10/11 x64 | 尚未取得实体/虚拟 Windows 系统的验收结果；兼容层测试不能替代这一项 |
 | Intel Mac / 无 Python 干净 Mac | 尚未实测；Mac 包当前为 arm64 |
 
@@ -42,4 +43,4 @@ Mac 应用使用临时签名，未经过 Developer ID 签名或 Apple 公证。�
 
 本轮低响应诊断显示：二维低响应区总响应量中位数约占 0.41%，对均方对数默认变化的贡献中位数约 84.3%。这解释了部分警告来源，不能据此删除警告或证明强响应区域不再变化。
 
-源码、文档和选定检查收据通过 [私有 GitHub 仓库](https://github.com/jianyuanliljy-hub/blr-mem-workbench) 交付，Windows / Mac 程序及源码 ZIP 在 [v0.1.0-dev1 预览版](https://github.com/jianyuanliljy-hub/blr-mem-workbench/releases/tag/v0.1.0-dev1) 下载。二进制包保留构建时的文档快照，Git 仓库提供更新后的分发信息；程序算法与默认科学参数一致。历史代码的作者与公开许可证仍由项目负责人确认。
+源码、文档和选定检查收据通过 [私有 GitHub 仓库](https://github.com/jianyuanliljy-hub/blr-mem-workbench) 交付，Windows / Mac 程序及源码 ZIP 在 [v0.1.0-dev1-r1 预览版](https://github.com/jianyuanliljy-hub/blr-mem-workbench/releases/tag/v0.1.0-dev1-r1) 下载。`r1` 为源码交付修订：报告测试显式用 UTF-8 读取中文，并补充 GitHub 检查记录；应用版本仍为 `0.1.0.dev1`，两个程序 ZIP 保持原样。二进制包保留构建时的文档快照，Git 仓库提供更新后的分发信息；程序算法与默认科学参数一致。历史代码的作者与公开许可证仍由项目负责人确认。

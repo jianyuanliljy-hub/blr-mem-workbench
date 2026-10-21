@@ -9,7 +9,7 @@ recursive-include src *.py
 recursive-include tests *.py
 recursive-include tools *.py
 recursive-include tools *.c
-recursive-include docs *.md *.png *.csv *.json
+recursive-include docs *.md *.png *.csv *.json *.xml
 recursive-include .github/workflows *.yml
 prune evidence
 prune deliverables

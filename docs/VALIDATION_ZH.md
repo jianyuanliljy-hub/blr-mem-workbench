@@ -82,6 +82,8 @@ macOS `.app` 使用 PyInstaller 6.22.3 构建，包含 Python、数值依赖和 
 
 低响应像素诊断覆盖全部 72 个二维旧解：响应低于峰值 1% 的像素比例中位数 24.65%，总响应份额中位数 0.4056%，其均方对数默认变化贡献中位数 84.30%。此为测试后解释，不更改稳定阈值，也不把原 WARN 改成 PASS。协议、逐例表和汇总位于 `evidence/improvement_review_20261021/readonly_analysis_final/`。
 
+2026-10-22（Asia/Shanghai）上传私有 GitHub 仓库后，同一 Windows 分发 ZIP 在 Microsoft Windows Server 2025 runner 原生运行。下载的 SHA-256 核对通过，在中文和空格路径解压后完成 20 个操作检查，覆盖两维 GUI/CLI、生成、反演、独立检测、报告、批量/扫描续跑、表单和错误恢复。运行与实际 ZIP 的身份见 [GitHub 收据](receipts/github_windows_package.json)，原始操作结果见 [原生 Windows 收据](receipts/windows_native_validation.json)。runner 已安装的系统组件和桌面会话不能代替 Windows 10/11 检查者电脑的人工验收。本次没有修改应用算法或重新求解旧 144 例；首次云端源码测试暴露的中文解码错误仅发生在测试脚本中，已显式指定 UTF-8。
+
 ## 当前不能声称的结论
 
 程序在上述合成分布外的稳定性、真实 AGN 恢复质量、完整后验/误差覆盖率、不同物理模型的可辨识性、更细二维网格表现、Windows 性能、与成熟程序的公平优劣均尚未建立。当前未完成作者和开源许可证核验，不应直接视为可公开发布的正式版本。

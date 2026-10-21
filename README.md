@@ -1,8 +1,8 @@
 # BLR MEM Workbench
 
-面向一维时延响应和二维速度–时延图的联合最大熵法（maximum entropy method, MEM）工作台。当前为 `0.1.0.dev1` 检查预览版：提供自带运行环境的 Windows x64 程序包和 macOS Apple Silicon 应用，两平台共用界面、命令行和算法。先阅读 [交付与人工检查](docs/DELIVERY_ZH.md)。Windows 二进制已在 Wine 兼容层运行完整操作链；真实 Windows 和 Intel Mac 尚未验收。
+面向一维时延响应和二维速度–时延图的联合最大熵法（maximum entropy method, MEM）工作台。当前为 `0.1.0.dev1` 检查预览版：提供自带运行环境的 Windows x64 程序包和 macOS Apple Silicon 应用，两平台共用界面、命令行和算法。先阅读 [交付与人工检查](docs/DELIVERY_ZH.md)。实际 Windows 分发包已通过原生 Windows CI 和 Wine 操作链；检查者电脑上的人工验收与 Intel Mac 检查仍待完成。
 
-[下载 Windows / Mac 程序和源码](https://github.com/jianyuanliljy-hub/blr-mem-workbench/releases/tag/v0.1.0-dev1)。Windows 完整解压后双击 `BLRWorkbench.exe`；M 系列 Mac 打开 `BLR MEM Workbench.app`。仓库当前为私有，访问和下载需要仓库权限。
+[下载 Windows / Mac 程序和源码](https://github.com/jianyuanliljy-hub/blr-mem-workbench/releases/tag/v0.1.0-dev1-r1)。Windows 完整解压后双击 `BLRWorkbench.exe`；M 系列 Mac 打开 `BLR MEM Workbench.app`。仓库当前为私有，访问和下载需要仓库权限。
 
 从这里开始阅读：
 

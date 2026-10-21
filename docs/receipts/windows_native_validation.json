@@ -1,0 +1,449 @@
+{
+  "schema_version": 1,
+  "utc": "2026-10-21T16:10:57.252813+00:00",
+  "execution_environment": "NATIVE_WINDOWS",
+  "version": "0.1.0.dev1",
+  "runtime_versions": "3.13.5 (main, Jul 11 2025, 22:38:12) [MSC v.1944 64 bit (AMD64)]\n2.3.4 1.15.3 2.2.3 3.10.0\n8.6.12",
+  "commands": [
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-c",
+        "import sys,numpy,scipy,pandas,matplotlib,tkinter; print(sys.version); print(numpy.__version__,scipy.__version__,pandas.__version__,matplotlib.__version__); print(tkinter.Tcl().eval('info patchlevel'))"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "--version"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "cmd.exe",
+        "/d",
+        "/c",
+        "call",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\blr-rm.cmd",
+        "--version"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "benchmark",
+        "--profile",
+        "smoke",
+        "--out",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\smoke"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "batch",
+        "--dimension",
+        "1",
+        "--count",
+        "2",
+        "--out",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\batch_1D"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "batch",
+        "--dimension",
+        "1",
+        "--count",
+        "2",
+        "--out",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\batch_1D",
+        "--resume"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "scan",
+        "--data",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\smoke\\data\\case_0000",
+        "--grid",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\grid_1D.json",
+        "--out",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\scan_1D"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "scan",
+        "--data",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\smoke\\data\\case_0000",
+        "--grid",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\grid_1D.json",
+        "--out",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\scan_1D",
+        "--resume"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "check",
+        "--data",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\smoke\\data\\case_0000",
+        "--result",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\smoke\\results\\case_0000"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "report",
+        "--data",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\smoke\\data\\case_0000",
+        "--result",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\smoke\\results\\case_0000",
+        "--out",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\report_1D"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "cmd.exe",
+        "/d",
+        "/c",
+        "call",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\1D\\start.cmd",
+        "--gui-smoke"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "batch",
+        "--dimension",
+        "2",
+        "--count",
+        "2",
+        "--out",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\batch_2D"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "batch",
+        "--dimension",
+        "2",
+        "--count",
+        "2",
+        "--out",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\batch_2D",
+        "--resume"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "scan",
+        "--data",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\smoke\\data\\case_0001",
+        "--grid",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\grid_2D.json",
+        "--out",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\scan_2D"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "scan",
+        "--data",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\smoke\\data\\case_0001",
+        "--grid",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\grid_2D.json",
+        "--out",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\scan_2D",
+        "--resume"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "check",
+        "--data",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\smoke\\data\\case_0001",
+        "--result",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\smoke\\results\\case_0001"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "report",
+        "--data",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\smoke\\data\\case_0001",
+        "--result",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\smoke\\results\\case_0001",
+        "--out",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\report_2D"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "cmd.exe",
+        "/d",
+        "/c",
+        "call",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\2D\\start.cmd",
+        "--gui-smoke"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "generate",
+        "--config",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\invalid.json",
+        "--out",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\unused"
+      ],
+      "returncode": 1
+    },
+    {
+      "arguments": [
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\程序 中文 路径\\BLR_MEM_Windows\\BLRWorkbench.exe",
+        "--gui-flow",
+        "--out",
+        "D:\\a\\blr-mem-workbench\\blr-mem-workbench\\build\\native-windows-check\\gui-flow.json"
+      ],
+      "returncode": 0
+    }
+  ],
+  "native_windows_execution": "PASS",
+  "cli_generate_fit_check_report": "PASS_BOTH_DIMENSIONS",
+  "batch_and_resume": "PASS_BOTH_DIMENSIONS",
+  "pure_scan_and_resume": "PASS_BOTH_DIMENSIONS",
+  "native_launcher_and_dimension_shortcuts": "PASS",
+  "gui_flow": [
+    {
+      "check": "PASS",
+      "dimension": 1,
+      "error_returns_to_idle": "PASS",
+      "forms_roundtrip_and_invalid_input": "PASS",
+      "generation": "PASS",
+      "inversion": "PASS",
+      "report": "PASS"
+    },
+    {
+      "check": "PASS",
+      "dimension": 2,
+      "error_returns_to_idle": "PASS",
+      "forms_roundtrip_and_invalid_input": "PASS",
+      "generation": "PASS",
+      "inversion": "PASS",
+      "report": "PASS"
+    }
+  ],
+  "checks": [
+    {
+      "checks": {
+        "floating_default_stability": "NOT_APPLICABLE_FIXED_DEFAULT",
+        "forward_consistency": "PASS",
+        "integrity": "PASS",
+        "numerical_convergence": "PASS"
+      },
+      "compute_seconds": 0.14264759999997523,
+      "forward_relative_error": 1.8598614499847535e-16,
+      "independent_numerics": {
+        "chi2_C": 2.3667143112101066,
+        "chi2_C_per_datum": 0.03114097777908035,
+        "chi2_L": 41.123863554553814,
+        "chi2_L_per_datum": 0.6741616976156363,
+        "component_tests": {
+          "background": 1.0,
+          "continuum": 2.0786288615903814e-06,
+          "map": 6.728151369372881e-11
+        },
+        "log_gradient_inf": 1.287255281236843e-05,
+        "objective_F": 21.914789435487254,
+        "objective_Q": -21.914789435487254,
+        "relative_gradient_blocks": {
+          "background": 1.0,
+          "continuum": 0.002041206028617351,
+          "map": 1.1723163692294965e-05
+        }
+      },
+      "observation_id": "14e6d01a39fc0dcd6b56ae7c3a875fc4f16b21289a808b207926be61c7fd018b",
+      "optimizer_history_warning": "NONE",
+      "optimizer_success": true,
+      "real_agn_validation": "NOT_RUN",
+      "schema_version": 1,
+      "scientific_acceptance": "NOT_ASSESSED",
+      "truth_metrics": {
+        "lag_centroid_error_days": -0.028668760583469677,
+        "raw_nmse": 0.0039106578700074,
+        "recovered_area": 1.0120108341261977,
+        "shape_nmse": 0.003931189090313896,
+        "true_area": 1.0,
+        "velocity_centroid_error_kms": 0.0
+      }
+    },
+    {
+      "checks": {
+        "floating_default_stability": "WARN",
+        "forward_consistency": "PASS",
+        "integrity": "PASS",
+        "numerical_convergence": "PASS"
+      },
+      "compute_seconds": 3.3252981999999633,
+      "forward_relative_error": 2.168349297307323e-16,
+      "independent_numerics": {
+        "chi2_C": 10.454011447574153,
+        "chi2_C_per_datum": 0.13755278220492306,
+        "chi2_L": 450.506915113347,
+        "chi2_L_per_datum": 0.8205954737948034,
+        "component_tests": {
+          "background": 9.159339953157541e-14,
+          "continuum": 1.1368390857247057e-05,
+          "map": 9.027070858591557e-07
+        },
+        "log_gradient_inf": 0.6591454063454314,
+        "objective_F": 659.8005211078646,
+        "objective_Q": -659.8005211078646,
+        "relative_gradient_blocks": {
+          "background": 1.9364213534003866e-06,
+          "continuum": 0.0047683043401639934,
+          "map": 0.0013466659884148907
+        }
+      },
+      "observation_id": "1c01bbd1015a942167aed8a37677763c2ff1cde732d2d13e1d4a4d8e9407c17e",
+      "optimizer_history_warning": "At least one optimizer call reported failure; final stationarity is assessed independently",
+      "optimizer_success": false,
+      "real_agn_validation": "NOT_RUN",
+      "schema_version": 1,
+      "scientific_acceptance": "NOT_ASSESSED",
+      "truth_metrics": {
+        "lag_centroid_error_days": 0.08966320670506178,
+        "raw_nmse": 0.006901985981341437,
+        "recovered_area": 1.0188685549063012,
+        "shape_nmse": 0.007164957343526545,
+        "true_area": 0.9999999999999999,
+        "velocity_centroid_error_kms": 9.178611577368528
+      }
+    }
+  ],
+  "scientific_acceptance": "NOT_ASSESSED"
+}

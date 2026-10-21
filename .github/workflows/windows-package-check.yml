@@ -5,7 +5,7 @@ on:
       tag:
         description: Preview release tag to check
         required: true
-        default: v0.1.0-dev1
+        default: v0.1.0-dev1-r1
         type: string
 permissions:
   contents: read

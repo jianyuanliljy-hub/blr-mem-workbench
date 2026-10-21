@@ -1,8 +1,10 @@
 # Windows / macOS 构建与 GitHub 分发
 
-当前交付为 `0.1.0.dev1` 检查预览，包含 Windows x64 便携程序、macOS Apple Silicon 应用和源码。Windows 二进制已在 Wine 11.18 中通过完整操作链，真实 Windows 验收尚未完成。macOS 使用说明、架构和签名边界见 [MACOS_ZH.md](MACOS_ZH.md)。
+当前交付为 `0.1.0.dev1` 检查预览，包含 Windows x64 便携程序、macOS Apple Silicon 应用和源码。Windows 二进制已在 Wine 11.18 和原生 Windows Server 2025 runner 中通过完整操作链；检查者电脑的人工验收尚待完成。macOS 使用说明、架构和签名边界见 [MACOS_ZH.md](MACOS_ZH.md)。
 
-代码保存在 [私有仓库](https://github.com/jianyuanliljy-hub/blr-mem-workbench)，成品在 [v0.1.0-dev1 预览版](https://github.com/jianyuanliljy-hub/blr-mem-workbench/releases/tag/v0.1.0-dev1)。访问需要仓库权限。Release 的 Windows / Mac ZIP 保持交付时的内容和 SHA-256；源码 ZIP 对应 Release 标签的 Git 提交，包含更新后的分发说明和复核收据。下载后可用同页的 `SHA256SUMS.txt` 核对。
+代码保存在 [私有仓库](https://github.com/jianyuanliljy-hub/blr-mem-workbench)，成品在 [v0.1.0-dev1-r1 预览版](https://github.com/jianyuanliljy-hub/blr-mem-workbench/releases/tag/v0.1.0-dev1-r1)。访问需要仓库权限。Release 的 Windows / Mac ZIP 保持交付时的内容和 SHA-256；源码 ZIP 对应 Release 标签的 Git 提交，包含更新后的分发说明和复核收据。下载后可用同页的 `SHA256SUMS.txt` 核对。
+
+`r1` 仅修订源码交付：首次 Windows CI 的两项报告测试使用系统默认 CP1252 读取 UTF-8 中文而失败，现已在测试中显式指定 UTF-8。应用源码、算法、科学默认参数和两个程序 ZIP 均未因此改变。保留最初的 Git 标签和失败运行供追溯，以修订标签交付更新的源码与检查记录。
 
 ## 本次 Windows 便携包
 
@@ -10,7 +12,7 @@
 
 `tools/build_windows_portable.py` 接受已下载的固定运行时、Windows CPython 3.13 wheels 与 Zig 编译器路径。运行时 SHA-256 在构建工具中固定；依赖版本由 `requirements-runtime.txt` 固定。Zig 仅用于生成小型启动器，不进入运行依赖。`build_identity.json` 记录运行时来源、wheels 和源码 SHA。
 
-`tools/validate_windows_portable.py` 必须实际调用 Windows 二进制，可在原生 Windows 运行，也可显式指定独立 Wine 前缀。收据区分 `NATIVE_WINDOWS` 与 `WINE_COMPATIBILITY_LAYER`，不把兼容层运行记为原生验收。本次已有 20 个操作检查通过。
+`tools/validate_windows_portable.py` 必须实际调用 Windows 二进制，可在原生 Windows 运行，也可显式指定独立 Wine 前缀。收据区分 `NATIVE_WINDOWS` 与 `WINE_COMPATIBILITY_LAYER`。两种环境各有 20 个操作检查通过；原生检查下载的是 Release 中实际交付的 ZIP，见 [运行记录](https://github.com/jianyuanliljy-hub/blr-mem-workbench/actions/runs/39632183302) 和 [收据](receipts/windows_native_validation.json)。
 
 ## 源码与复核
 
@@ -75,7 +77,7 @@ dist/BLR-RM/
 ## 正式公开发布尚缺的事项
 
 - 历史代码作者、贡献归属、允许再分发的范围、正式 `LICENSE`。
-- Windows 本机构建、无 Python 的干净环境和实际界面验收。
+- Windows 10/11 检查者电脑、无 Python 的干净环境和实际人工界面验收。
 - Intel Mac 实际构建运行；macOS 干净系统验证，以及面向外部分发的 Developer ID 签名与公证。
 - 二维浮动默认图像的预算/默认模型敏感性；当前六轮之后的稳定性警告必须保留。
 - 更广科学协议：更大/更细网格、不同采样和连续谱、异方差与系统误差、真实观测、第三方程序比较。
