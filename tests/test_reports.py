@@ -24,7 +24,7 @@ def test_offline_report_with_and_without_truth_preserves_numerical_state(tmp_pat
         saved = read_json(output / "check.json")
         assert saved["checks"] == original["checks"]
         assert ("truth_metrics" in saved) is has_truth
-        document = (output / "report.html").read_text()
+        document = (output / "report.html").read_text(encoding="utf-8")
         assert "最终一阶条件" in document
         assert (output / "diagnostics.png").stat().st_size > 1000
         assert (output / "reconstruction.png").stat().st_size > 1000
