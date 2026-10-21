@@ -68,6 +68,8 @@ dist/BLR-RM/
 
 `macos-build.yml` 使用 `macos-15`（arm64）和 `macos-15-intel`（x86_64）分别构建、检查并归档 `.app`。runner 标签核对自 GitHub 官方 `actions/runner-images`；当前没有触发云端构建。无桌面会话的界面检查显式跳过并记录。
 
+`windows-package-check.yml` 从指定 Release 下载已经交付的 Windows ZIP，核对 SHA-256，解压到中文和空格路径，并使用包内运行时执行两维 GUI/CLI、批量/扫描续跑和报告检查。它在原生 Windows runner 上检查实际分发包，收据保存在运行的 Artifact 中；runner 已安装的系统组件及桌面会话不能代表每台人工检查电脑。
+
 推送 `main` 会触发源码测试，两个平台构建工作流通过手动入口触发；实际状态以 [Actions 运行记录](https://github.com/jianyuanliljy-hub/blr-mem-workbench/actions) 为准。源码测试通过不等于 Release 成品或真实桌面操作已经验收。正式使用前还应根据仓库安全策略核对 Action 版本和固定提交 SHA。
 
 ## 正式公开发布尚缺的事项
