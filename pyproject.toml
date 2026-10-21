@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blr-rm-workbench"
+version = "0.1.0.dev1"
+description = "Reproducible 1D and 2D maximum-entropy reverberation-mapping workbench"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "scipy>=1.13,<2", "pandas>=2,<3", "matplotlib>=3.8,<4"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+build = ["pyinstaller>=6,<7", "build>=1,<2"]
+
+[project.scripts]
+blr-rm = "blr_rm.cli:main"
+
+[project.gui-scripts]
+blr-rm-gui = "blr_rm.gui:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+exclude = ["src/blr_rm/_vendor"]

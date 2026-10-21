@@ -1,0 +1,27 @@
+{
+  "artifacts": "/var/folders/ls/q0y9n6pd4md6m7s2k3k7gcb80000gn/T/BLR GUI 中文路径 ccimj5vc",
+  "event_loop": "NATIVE_TK_MAINLOOP",
+  "schema_version": 1,
+  "tests": [
+    {
+      "check": "PASS",
+      "dimension": 1,
+      "error_returns_to_idle": "PASS",
+      "forms_roundtrip_and_invalid_input": "PASS",
+      "generation": "PASS",
+      "inversion": "PASS",
+      "report": "PASS"
+    },
+    {
+      "check": "PASS",
+      "dimension": 2,
+      "error_returns_to_idle": "PASS",
+      "forms_roundtrip_and_invalid_input": "PASS",
+      "generation": "PASS",
+      "inversion": "PASS",
+      "report": "PASS"
+    }
+  ],
+  "unicode_and_space_output_path": "PASS",
+  "visual_review": "NOT_ASSESSED_BY_AUTOMATION"
+}

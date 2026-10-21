@@ -1,0 +1,7 @@
+{
+  "acceptance_changes": "NONE",
+  "case_selection": "All existing 144 cases; all 72 2D maps",
+  "kind": "POST_HOC_READ_ONLY_DIAGNOSTIC",
+  "low_response_threshold": "Psi < 0.01 * max(Psi)",
+  "reoptimization": "NONE"
+}

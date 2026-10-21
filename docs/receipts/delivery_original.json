@@ -1,0 +1,75 @@
+{
+  "version": "0.1.0.dev1",
+  "source_sha256": {
+    "__init__.py": "cc698e1cfbe221920751c1d6c73b4e758708d62263f5b0d6cf82e4900a98b5b6",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "_vendor/__init__.py": "a9b21a63b2e15a97ca142f3754b214e4a52cc785e4be565c5a503eed0f88505c",
+    "_vendor/interpolation.py": "2157ee7acde524bffdfad363d39ea45231a0e045199132bf4707f0be8c92e7b4",
+    "_vendor/mem2d.py": "142f651aef94d34fe596bf7c4cae51b1fedb993573c8925e9c8b4668fdfab628",
+    "_vendor/memecho.py": "9ce5c66a81a17d1ced4626ac52e6a086f027abedf9335206434c5d48ea7e51c9",
+    "benchmark.py": "064bb8e9fce5312d39aadef0ba5ebb8a0aaee047e166ee671702a61d8e3a796e",
+    "cli.py": "fdabc8277db3b9906b34ad28304f2a3cb21e7c7ba4bf536f31ca6f8a0660c1a0",
+    "config.py": "1c9bc3d5059c014dd42216c4c37562a42825cb7f9f94c38a444c90ea1a492834",
+    "data.py": "a8c3a85f1937896011194412dee24e0e1278f920dd34c04af8a0d93299d0c86c",
+    "detector.py": "bc72629254b765b8e7c6917b37def991ce88187b1a8e2a156ce5b4a34f189cad",
+    "gui.py": "e52c41642483a01f24db150c13e439b54c4dc2ee0b84af4f394d86f70f7814de",
+    "gui_forms.py": "a780e9586ba045bd78d58c0fe83695ce7035c2ccac37dcfb261a486a6aeeaf7d",
+    "gui_validation.py": "8699826ae795e68f795d74071be33934a9dbda220a9c178b7075627026bfef56",
+    "report.py": "c0297c8f4059045078d1db7c86d20818932af20df6d09353ef64b0e84c8fb458",
+    "scaled_1d.py": "4b012d1bd2ab776cc6d5e61f8f3accf7cb85e9de1b5d977bb78859fb173599b2",
+    "scan.py": "fc4a278146441c03fdda13244e8a5d1db9e326bc8fca338a13a4c2dd5a586a3e",
+    "solver.py": "44a71098666dc8015c73e905bb07f458fe3defbb638778f7f10bfea0979b8d6e",
+    "status.py": "8d560a3db4de792c7d146ca6eeb283db1acca29e1c5359c58aff409b36880888",
+    "storage.py": "85734f5b0cf776440c9b04fd64c6e6fa4cedde3dbbb1acfb6c16fe3cd190bc15"
+  },
+  "packaged_source_identity": "PASS_BOTH_PLATFORMS",
+  "unit_tests": {
+    "passed": 60,
+    "failed": 0,
+    "receipt": "tests_final.xml"
+  },
+  "source_static_checks": "PASS_RUFF_SRC_TESTS_TOOLS_VENDOR_EXCLUDED",
+  "macos_frozen": "PASS_GUI_CLI_BOTH_DIMENSIONS_AND_DYNAMIC_LINK_AUDIT",
+  "windows_binaries": "PASS_20_OPERATIONS_IN_WINE_11.18",
+  "native_windows": "NOT_RUN",
+  "archive_relocation": "PASS_BOTH_PLATFORMS_IN_UNICODE_AND_SPACE_PATHS",
+  "existing_144_cases_reoptimized": false,
+  "existing_144_metrics_and_statuses": "UNCHANGED_AFTER_INDEPENDENT_RECHECK",
+  "2d_floating_default_warnings": 72,
+  "scientific_acceptance": "NOT_ASSESSED",
+  "artifacts": [
+    {
+      "archive": "BLR_MEM_Workbench_0.1.0-dev1_Windows_x64.zip",
+      "bytes": 110163272,
+      "sha256": "d1b3f18991d137274e19ed11e54a8bcb2ddc531f3de77defdf3c1980a2702ed7",
+      "files_and_symlinks": 10215,
+      "crc": "PASS",
+      "member_hashes": "PASS",
+      "platform": "windows",
+      "native_windows_execution": "NOT_RUN",
+      "scientific_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "archive": "BLR_MEM_Workbench_0.1.0-dev1_macOS_AppleSilicon.zip",
+      "bytes": 68191485,
+      "sha256": "3c2614dffa3dd5a2e966f28d75f0d275a179306ba6f65ee1840e88dbac777ac1",
+      "files_and_symlinks": 1609,
+      "crc": "PASS",
+      "member_hashes": "PASS",
+      "platform": "macos",
+      "native_windows_execution": "NOT_RUN",
+      "scientific_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "archive": "BLR_MEM_Workbench_0.1.0-dev1_source_for_GitHub.zip",
+      "sha256": "3221a7a58a278e6c33b24d77002f505a416de6d145bdd498431258845d4f12c3",
+      "members": 82,
+      "bytes": 344502,
+      "crc": "PASS",
+      "member_set": "PASS",
+      "sha256_validation": "PASS",
+      "license": "PENDING_AUTHOR_CONFIRMATION",
+      "windows_binary_validation": "NOT_RUN"
+    }
+  ]
+}

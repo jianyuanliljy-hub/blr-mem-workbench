@@ -1,0 +1,27 @@
+{
+  "2d_cases": 72,
+  "acceptance_thresholds": "UNCHANGED",
+  "existing_144_cases_rechecked": "PASS",
+  "floating_default_warnings": 72,
+  "generator_and_solver_defaults": "UNCHANGED",
+  "post_hoc_medians": {
+    "low_response_log_change_share": 0.842978351500351,
+    "low_response_mass_fraction": 0.004056408095206668,
+    "low_response_pixel_fraction": 0.2465277777777778,
+    "low_response_rms_log_change": 0.6257647085349998,
+    "map_rms_log_change": 0.31795736104353134,
+    "other_response_rms_log_change": 0.1483105664498569
+  },
+  "saved_metrics_and_statuses_unchanged": "PASS",
+  "scientific_acceptance": "NOT_ASSESSED",
+  "scientific_core_source_sha256": {
+    "src/blr_rm/_vendor/__init__.py": "a9b21a63b2e15a97ca142f3754b214e4a52cc785e4be565c5a503eed0f88505c",
+    "src/blr_rm/_vendor/interpolation.py": "2157ee7acde524bffdfad363d39ea45231a0e045199132bf4707f0be8c92e7b4",
+    "src/blr_rm/_vendor/mem2d.py": "142f651aef94d34fe596bf7c4cae51b1fedb993573c8925e9c8b4668fdfab628",
+    "src/blr_rm/_vendor/memecho.py": "9ce5c66a81a17d1ced4626ac52e6a086f027abedf9335206434c5d48ea7e51c9",
+    "src/blr_rm/data.py": "a8c3a85f1937896011194412dee24e0e1278f920dd34c04af8a0d93299d0c86c",
+    "src/blr_rm/detector.py": "bc72629254b765b8e7c6917b37def991ce88187b1a8e2a156ce5b4a34f189cad",
+    "src/blr_rm/scaled_1d.py": "4b012d1bd2ab776cc6d5e61f8f3accf7cb85e9de1b5d977bb78859fb173599b2",
+    "src/blr_rm/solver.py": "44a71098666dc8015c73e905bb07f458fe3defbb638778f7f10bfea0979b8d6e"
+  }
+}

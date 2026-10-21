@@ -1,0 +1,9 @@
+{
+  "alpha": 0.2,
+  "engine": "joint_mem_1d_scaled_fixed_default",
+  "function_tolerance": 1e-15,
+  "gradient_tolerance": 1e-07,
+  "max_iterations": 1200,
+  "stationarity_tolerance": 0.001,
+  "stiffness_weight": 1.0
+}

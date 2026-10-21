@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-20",
+  "files": [
+    {
+      "source": "blr_mem_1d_week1/src/blr_mem/memecho.py",
+      "target": "src/blr_rm/_vendor/memecho.py",
+      "source_sha256": "9ce5c66a81a17d1ced4626ac52e6a086f027abedf9335206434c5d48ea7e51c9",
+      "packaged_sha256": "9ce5c66a81a17d1ced4626ac52e6a086f027abedf9335206434c5d48ea7e51c9",
+      "change": "Byte-for-byte copy."
+    },
+    {
+      "source": "blr_mem_1d_week1/src/blr_mem/interpolation.py",
+      "target": "src/blr_rm/_vendor/interpolation.py",
+      "source_sha256": "2157ee7acde524bffdfad363d39ea45231a0e045199132bf4707f0be8c92e7b4",
+      "packaged_sha256": "2157ee7acde524bffdfad363d39ea45231a0e045199132bf4707f0be8c92e7b4",
+      "change": "Byte-for-byte copy."
+    },
+    {
+      "source": "20260825-CNN 2D 测试/FULL_2D_EXPERIMENT/src2d/mem2d.py",
+      "target": "src/blr_rm/_vendor/mem2d.py",
+      "source_sha256": "4db64963c067ec9c86ac4c77a6597b161ffc1b9a52ae7947a51bdb75e09fc64c",
+      "packaged_sha256": "142f651aef94d34fe596bf7c4cae51b1fedb993573c8925e9c8b4668fdfab628",
+      "change": "Expose final frozen defaults in diagnostics only; objective, gradients and optimization are unchanged."
+    }
+  ],
+  "external_code_copied": false,
+  "license_status": "Local source ownership and release license require author confirmation before public release."
+}

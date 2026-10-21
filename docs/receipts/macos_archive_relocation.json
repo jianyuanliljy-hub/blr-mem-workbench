@@ -1,0 +1,98 @@
+{
+  "platform": "macos",
+  "version": "0.1.0.dev1",
+  "environment": "NATIVE_MACOS",
+  "unicode_and_space_archive_location": "PASS",
+  "external_python_and_tk_environment_removed": true,
+  "path_contains_system_directories_only": true,
+  "gui": {
+    "artifacts": "/var/folders/ls/q0y9n6pd4md6m7s2k3k7gcb80000gn/T/BLR GUI 中文路径 gx4v02fo",
+    "event_loop": "NATIVE_TK_MAINLOOP",
+    "schema_version": 1,
+    "tests": [
+      {
+        "check": "PASS",
+        "dimension": 1,
+        "error_returns_to_idle": "PASS",
+        "forms_roundtrip_and_invalid_input": "PASS",
+        "generation": "PASS",
+        "inversion": "PASS",
+        "report": "PASS"
+      },
+      {
+        "check": "PASS",
+        "dimension": 2,
+        "error_returns_to_idle": "PASS",
+        "forms_roundtrip_and_invalid_input": "PASS",
+        "generation": "PASS",
+        "inversion": "PASS",
+        "report": "PASS"
+      }
+    ],
+    "unicode_and_space_output_path": "PASS",
+    "visual_review": "NOT_ASSESSED_BY_AUTOMATION"
+  },
+  "examples_checked_against_paired_data": "PASS_BOTH_DIMENSIONS",
+  "commands": [
+    {
+      "arguments": [
+        "/usr/bin/codesign",
+        "--verify",
+        "--deep",
+        "--strict",
+        "/private/tmp/BLR 发布检查 中文 路径/Mac/BLR-MEM-macOS-arm64-review-dev1/BLR MEM Workbench.app"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "/private/tmp/BLR 发布检查 中文 路径/Mac/BLR-MEM-macOS-arm64-review-dev1/blr-rm",
+        "--version"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "/private/tmp/BLR 发布检查 中文 路径/Mac/BLR-MEM-macOS-arm64-review-dev1/blr-rm",
+        "benchmark",
+        "--profile",
+        "smoke",
+        "--out",
+        "/private/tmp/BLR 发布检查 中文 路径/Mac/smoke"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "/private/tmp/BLR 发布检查 中文 路径/Mac/BLR-MEM-macOS-arm64-review-dev1/BLR MEM Workbench.app/Contents/MacOS/BLRWorkbench",
+        "--gui-flow",
+        "--out",
+        "/private/tmp/BLR 发布检查 中文 路径/Mac/gui-flow.json"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "/private/tmp/BLR 发布检查 中文 路径/Mac/BLR-MEM-macOS-arm64-review-dev1/blr-rm",
+        "check",
+        "--data",
+        "/private/tmp/BLR 发布检查 中文 路径/Mac/BLR-MEM-macOS-arm64-review-dev1/examples/1D/data",
+        "--result",
+        "/private/tmp/BLR 发布检查 中文 路径/Mac/BLR-MEM-macOS-arm64-review-dev1/examples/1D/result"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "/private/tmp/BLR 发布检查 中文 路径/Mac/BLR-MEM-macOS-arm64-review-dev1/blr-rm",
+        "check",
+        "--data",
+        "/private/tmp/BLR 发布检查 中文 路径/Mac/BLR-MEM-macOS-arm64-review-dev1/examples/2D/data",
+        "--result",
+        "/private/tmp/BLR 发布检查 中文 路径/Mac/BLR-MEM-macOS-arm64-review-dev1/examples/2D/result"
+      ],
+      "returncode": 0
+    }
+  ],
+  "native_windows_execution": "NOT_RUN"
+}

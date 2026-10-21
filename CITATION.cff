@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Development preview: confirm contributor names and the release license before public citation or distribution."
+type: software
+title: "BLR MEM Workbench"
+version: 0.1.0.dev1
+repository-code: "https://github.com/jianyuanliljy-hub/blr-mem-workbench"
+authors:
+  - name: "BLR MEM Workbench contributors (formal authorship pending confirmation)"
+abstract: "A development workbench for synthetic-data generation, joint maximum-entropy inversion, independent numerical checks, and reproducible 1D/2D reverberation-mapping validation."

@@ -1,0 +1,17 @@
+{
+  "cadence_days": 1.0,
+  "continuum_background": 10.0,
+  "delay_max_days": 15.0,
+  "delay_step_days": 1.0,
+  "dimension": 2,
+  "duration_days": 60.0,
+  "family": "tilted_gaussian",
+  "line_background": 5.0,
+  "missing_fraction": 0.0,
+  "n_velocity": 9,
+  "noise_fraction": 0.0,
+  "psd_beta": 1.5,
+  "schema_version": 1,
+  "seed": 731,
+  "velocity_max_kms": 3000.0
+}

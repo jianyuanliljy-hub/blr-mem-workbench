@@ -1,0 +1,112 @@
+{
+  "platform": "windows",
+  "version": "0.1.0.dev1",
+  "environment": "WINE_COMPATIBILITY_LAYER",
+  "unicode_and_space_archive_location": "PASS",
+  "external_python_and_tk_environment_removed": true,
+  "path_contains_system_directories_only": true,
+  "gui": {
+    "artifacts": "C:\\users\\lijy\\AppData\\Local\\Temp\\BLR GUI 中文路径 8g_fxi5t",
+    "event_loop": "NATIVE_TK_MAINLOOP",
+    "schema_version": 1,
+    "tests": [
+      {
+        "check": "PASS",
+        "dimension": 1,
+        "error_returns_to_idle": "PASS",
+        "forms_roundtrip_and_invalid_input": "PASS",
+        "generation": "PASS",
+        "inversion": "PASS",
+        "report": "PASS"
+      },
+      {
+        "check": "PASS",
+        "dimension": 2,
+        "error_returns_to_idle": "PASS",
+        "forms_roundtrip_and_invalid_input": "PASS",
+        "generation": "PASS",
+        "inversion": "PASS",
+        "report": "PASS"
+      }
+    ],
+    "unicode_and_space_output_path": "PASS",
+    "visual_review": "NOT_ASSESSED_BY_AUTOMATION"
+  },
+  "examples_checked_against_paired_data": "PASS_BOTH_DIMENSIONS",
+  "commands": [
+    {
+      "arguments": [
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "--version"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "benchmark",
+        "--profile",
+        "smoke",
+        "--out",
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\smoke"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\BLR_MEM_Windows\\BLRWorkbench.exe",
+        "--gui-flow",
+        "--out",
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\gui-flow.json"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "check",
+        "--data",
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\BLR_MEM_Windows\\examples\\1D\\data",
+        "--result",
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\BLR_MEM_Windows\\examples\\1D\\result"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\BLR_MEM_Windows\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\BLR_MEM_Windows\\launch.pyw",
+        "--cli",
+        "check",
+        "--data",
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\BLR_MEM_Windows\\examples\\2D\\data",
+        "--result",
+        "Z:\\private\\tmp\\BLR 发布检查 中文 路径\\Windows\\BLR_MEM_Windows\\examples\\2D\\result"
+      ],
+      "returncode": 0
+    }
+  ],
+  "native_windows_execution": "NOT_RUN"
+}

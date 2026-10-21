@@ -1,0 +1,19 @@
+include README.md NOTICE.md CITATION.cff pyproject.toml provenance.json .gitignore
+include blr_rm_windows.spec
+include blr_rm_macos.spec
+include requirements-tested-*.txt
+include requirements-runtime.txt
+recursive-include 1D *.json *.cmd *.command
+recursive-include 2D *.json *.cmd *.command
+recursive-include src *.py
+recursive-include tests *.py
+recursive-include tools *.py
+recursive-include tools *.c
+recursive-include docs *.md *.png *.csv *.json
+recursive-include .github/workflows *.yml
+prune evidence
+prune deliverables
+prune .venv
+prune build
+prune dist
+global-exclude *.py[cod] .DS_Store

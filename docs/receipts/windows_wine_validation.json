@@ -1,0 +1,449 @@
+{
+  "schema_version": 1,
+  "utc": "2026-10-21T12:23:07.228840+00:00",
+  "execution_environment": "WINE_COMPATIBILITY_LAYER",
+  "version": "0.1.0.dev1",
+  "runtime_versions": "3.13.5 (main, Jul 11 2025, 22:38:12) [MSC v.1944 64 bit (AMD64)]\n2.3.4 1.15.3 2.2.3 3.10.0\n8.6.12",
+  "commands": [
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-c",
+        "import sys,numpy,scipy,pandas,matplotlib,tkinter; print(sys.version); print(numpy.__version__,scipy.__version__,pandas.__version__,matplotlib.__version__); print(tkinter.Tcl().eval('info patchlevel'))"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "--version"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "cmd.exe",
+        "/d",
+        "/c",
+        "call",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\blr-rm.cmd",
+        "--version"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "benchmark",
+        "--profile",
+        "smoke",
+        "--out",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\smoke"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "batch",
+        "--dimension",
+        "1",
+        "--count",
+        "2",
+        "--out",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\batch_1D"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "batch",
+        "--dimension",
+        "1",
+        "--count",
+        "2",
+        "--out",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\batch_1D",
+        "--resume"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "scan",
+        "--data",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\smoke\\data\\case_0000",
+        "--grid",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\grid_1D.json",
+        "--out",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\scan_1D"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "scan",
+        "--data",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\smoke\\data\\case_0000",
+        "--grid",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\grid_1D.json",
+        "--out",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\scan_1D",
+        "--resume"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "check",
+        "--data",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\smoke\\data\\case_0000",
+        "--result",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\smoke\\results\\case_0000"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "report",
+        "--data",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\smoke\\data\\case_0000",
+        "--result",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\smoke\\results\\case_0000",
+        "--out",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\report_1D"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "cmd.exe",
+        "/d",
+        "/c",
+        "call",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\1D\\start.cmd",
+        "--gui-smoke"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "batch",
+        "--dimension",
+        "2",
+        "--count",
+        "2",
+        "--out",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\batch_2D"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "batch",
+        "--dimension",
+        "2",
+        "--count",
+        "2",
+        "--out",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\batch_2D",
+        "--resume"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "scan",
+        "--data",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\smoke\\data\\case_0001",
+        "--grid",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\grid_2D.json",
+        "--out",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\scan_2D"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "scan",
+        "--data",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\smoke\\data\\case_0001",
+        "--grid",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\grid_2D.json",
+        "--out",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\scan_2D",
+        "--resume"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "check",
+        "--data",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\smoke\\data\\case_0001",
+        "--result",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\smoke\\results\\case_0001"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "report",
+        "--data",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\smoke\\data\\case_0001",
+        "--result",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\smoke\\results\\case_0001",
+        "--out",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\report_2D"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "cmd.exe",
+        "/d",
+        "/c",
+        "call",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\2D\\start.cmd",
+        "--gui-smoke"
+      ],
+      "returncode": 0
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\_runtime\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\launch.pyw",
+        "--cli",
+        "generate",
+        "--config",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\invalid.json",
+        "--out",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\unused"
+      ],
+      "returncode": 1
+    },
+    {
+      "arguments": [
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\dist\\BLR-MEM-Windows-x64-review-dev1\\BLRWorkbench.exe",
+        "--gui-flow",
+        "--out",
+        "Z:\\Users\\lijy\\Desktop\\CodeX Project\\2026-07-15-BLR-AGN\\BLR_RM_PACKAGE\\evidence\\improvement_review_20261021\\windows_wine_round2\\gui-flow.json"
+      ],
+      "returncode": 0
+    }
+  ],
+  "native_windows_execution": "NOT_RUN",
+  "cli_generate_fit_check_report": "PASS_BOTH_DIMENSIONS",
+  "batch_and_resume": "PASS_BOTH_DIMENSIONS",
+  "pure_scan_and_resume": "PASS_BOTH_DIMENSIONS",
+  "native_launcher_and_dimension_shortcuts": "PASS",
+  "gui_flow": [
+    {
+      "check": "PASS",
+      "dimension": 1,
+      "error_returns_to_idle": "PASS",
+      "forms_roundtrip_and_invalid_input": "PASS",
+      "generation": "PASS",
+      "inversion": "PASS",
+      "report": "PASS"
+    },
+    {
+      "check": "PASS",
+      "dimension": 2,
+      "error_returns_to_idle": "PASS",
+      "forms_roundtrip_and_invalid_input": "PASS",
+      "generation": "PASS",
+      "inversion": "PASS",
+      "report": "PASS"
+    }
+  ],
+  "checks": [
+    {
+      "checks": {
+        "floating_default_stability": "NOT_APPLICABLE_FIXED_DEFAULT",
+        "forward_consistency": "PASS",
+        "integrity": "PASS",
+        "numerical_convergence": "PASS"
+      },
+      "compute_seconds": 0.08900379999249708,
+      "forward_relative_error": 2.0152364226837213e-16,
+      "independent_numerics": {
+        "chi2_C": 2.3667143163427573,
+        "chi2_C_per_datum": 0.031140977846615226,
+        "chi2_L": 41.123863549005975,
+        "chi2_L_per_datum": 0.6741616975246881,
+        "component_tests": {
+          "background": 1.0,
+          "continuum": 2.172114349052734e-06,
+          "map": 1.2324274933916968e-10
+        },
+        "log_gradient_inf": 1.2818560071791967e-05,
+        "objective_F": 21.914789435486938,
+        "objective_Q": -21.914789435486938,
+        "relative_gradient_blocks": {
+          "background": 1.0,
+          "continuum": 0.002084281773325732,
+          "map": 1.5912568122827885e-05
+        }
+      },
+      "observation_id": "2fc2ed78f9d0b4c3a47af68f3b90e5abe7db9c68c4b6ecd23c884db83444a581",
+      "optimizer_history_warning": "NONE",
+      "optimizer_success": true,
+      "real_agn_validation": "NOT_RUN",
+      "schema_version": 1,
+      "scientific_acceptance": "NOT_ASSESSED",
+      "truth_metrics": {
+        "lag_centroid_error_days": -0.028668765612128055,
+        "raw_nmse": 0.0039106579429103614,
+        "recovered_area": 1.0120108334670794,
+        "shape_nmse": 0.00393118914962742,
+        "true_area": 1.0,
+        "velocity_centroid_error_kms": 0.0
+      }
+    },
+    {
+      "checks": {
+        "floating_default_stability": "WARN",
+        "forward_consistency": "PASS",
+        "integrity": "PASS",
+        "numerical_convergence": "PASS"
+      },
+      "compute_seconds": 1.6803846999973757,
+      "forward_relative_error": 2.1959726949713234e-16,
+      "independent_numerics": {
+        "chi2_C": 10.45401144311952,
+        "chi2_C_per_datum": 0.13755278214630948,
+        "chi2_L": 450.5069151332856,
+        "chi2_L_per_datum": 0.8205954738311213,
+        "component_tests": {
+          "background": 1.942890293094024e-14,
+          "continuum": 1.136837991599915e-05,
+          "map": 9.027092603419717e-07
+        },
+        "log_gradient_inf": 0.6591451543693487,
+        "objective_F": 659.8005212745909,
+        "objective_Q": -659.8005212745909,
+        "relative_gradient_blocks": {
+          "background": 2.3345735634165857e-07,
+          "continuum": 0.004768302045525393,
+          "map": 0.001346667586386953
+        }
+      },
+      "observation_id": "3deaaa01968f2ca3397e1aa19584f3a4c7b6446cad7a5c252ee8dea84b6d0634",
+      "optimizer_history_warning": "At least one optimizer call reported failure; final stationarity is assessed independently",
+      "optimizer_success": false,
+      "real_agn_validation": "NOT_RUN",
+      "schema_version": 1,
+      "scientific_acceptance": "NOT_ASSESSED",
+      "truth_metrics": {
+        "lag_centroid_error_days": 0.08966320695326857,
+        "raw_nmse": 0.006901985974912998,
+        "recovered_area": 1.0188685549496146,
+        "shape_nmse": 0.007164957335621466,
+        "true_area": 0.9999999999999999,
+        "velocity_centroid_error_kms": 9.178611569524676
+      }
+    }
+  ],
+  "scientific_acceptance": "NOT_ASSESSED"
+}
