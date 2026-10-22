@@ -30,6 +30,7 @@
   <a href="docs/USAGE_ZH.md">User guide (中文)</a> ·
   <a href="#command-line">Command line</a> ·
   <a href="#validation">Validation</a> ·
+  <a href="#references">References</a> ·
   <a href="CONTRIBUTING.md">Contributing</a>
 </p>
 
@@ -154,6 +155,15 @@ Include the app version, operating system, dimension, minimal configuration and 
 
 </details>
 
+## References
+
+- Blandford, R. D. & McKee, C. F. (1982). [Reverberation mapping of the emission line regions of Seyfert galaxies and quasars](https://doi.org/10.1086/159843). *The Astrophysical Journal*, **255**, 419. — Response-function framework.
+- Horne, K. (1994). [Echo Mapping Problems: Maximum Entropy Solutions](https://ui.adsabs.harvard.edu/abs/1994ASPC...69...23H/abstract). *ASP Conference Series*, **69**, 23. — Joint MEM and default images.
+- Timmer, J. & König, M. (1995). [On generating power law noise](https://ui.adsabs.harvard.edu/abs/1995A%26A...300..707T/abstract). *Astronomy and Astrophysics*, **300**, 707–710. — Fourier-based synthetic light curves.
+- Mangham, S. W. et al. (2019). [Do reverberation mapping analyses provide an accurate picture of the broad-line region?](https://doi.org/10.1093/mnras/stz1713). *MNRAS*, **488**, 2780–2799. — Controlled recovery tests and interpretation limits.
+
+See the [full references and their roles in the code](docs/REFERENCES.md), including L-BFGS-B, SciPy and observational MEMEcho work. [Download BibTeX](docs/references.bib). These method references are separate from [citing this software](CITATION.cff).
+
 ## Contributing and citation
 
 Contributions to installation, documentation, tests and small reproducible examples are welcome. Changes to numerical algorithms, scientific defaults and evaluation metrics need independent evidence; see [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -196,6 +206,7 @@ Historical authorship, redistribution rights and the formal release license rema
   <a href="docs/USAGE_ZH.md">使用指南</a> ·
   <a href="#命令行">命令行</a> ·
   <a href="#验证结果">验证结果</a> ·
+  <a href="#参考文献">参考文献</a> ·
   <a href="CONTRIBUTING.md">参与贡献</a>
 </p>
 
@@ -317,6 +328,15 @@ Windows 和 Mac 成品自带 Python、数值依赖与 Tcl/Tk。完整解压后�
 请提供程序版本、操作系统、维度、最小配置和完整错误信息。通过 [问题反馈](https://github.com/jianyuanliljy-hub/blr-mem-workbench/issues/new/choose) 提交，开发与验证约定见 [贡献指南](CONTRIBUTING.md)。
 
 </details>
+
+## 参考文献
+
+- Blandford, R. D. & McKee, C. F. (1982). [Reverberation mapping of the emission line regions of Seyfert galaxies and quasars](https://doi.org/10.1086/159843). *The Astrophysical Journal*, **255**, 419。对应响应函数的回声映射框架。
+- Horne, K. (1994). [Echo Mapping Problems: Maximum Entropy Solutions](https://ui.adsabs.harvard.edu/abs/1994ASPC...69...23H/abstract). *ASP Conference Series*, **69**, 23。对应联合最大熵建模与默认图像。
+- Timmer, J. & König, M. (1995). [On generating power law noise](https://ui.adsabs.harvard.edu/abs/1995A%26A...300..707T/abstract). *Astronomy and Astrophysics*, **300**, 707–710。对应傅里叶方法生成的合成光变。
+- Mangham, S. W. et al. (2019). [Do reverberation mapping analyses provide an accurate picture of the broad-line region?](https://doi.org/10.1093/mnras/stz1713). *MNRAS*, **488**, 2780–2799。对应已知真值的恢复检验与物理解读限制。
+
+[完整文献与代码对应关系](docs/REFERENCES.md) 另含 L-BFGS-B、SciPy 和观测 MEMEcho 研究；可下载 [BibTeX](docs/references.bib)。方法文献与 [本软件的引用信息](CITATION.cff) 分别记录。
 
 ## 贡献与引用
 

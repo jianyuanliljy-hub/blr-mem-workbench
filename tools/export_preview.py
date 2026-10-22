@@ -45,6 +45,7 @@ def main():
         "tools/*.py",
         "tools/*.c",
         "docs/**/*.md",
+        "docs/**/*.bib",
         "docs/**/*.png",
         "docs/**/*.svg",
         "docs/**/*.csv",
