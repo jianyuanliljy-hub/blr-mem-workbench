@@ -2,7 +2,7 @@
 
 当前交付为 `0.1.0.dev1` 检查预览，包含 Windows x64 便携程序、macOS Apple Silicon 应用和源码。Windows 二进制已在 Wine 11.18 和原生 Windows Server 2025 runner 中通过完整操作链；检查者电脑的人工验收尚待完成。macOS 使用说明、架构和签名边界见 [MACOS_ZH.md](MACOS_ZH.md)。
 
-代码保存在 [GitHub 仓库](https://github.com/jianyuanliljy-hub/blr-mem-workbench)，成品在 [v0.1.0-dev1-r1 预览版](https://github.com/jianyuanliljy-hub/blr-mem-workbench/releases/tag/v0.1.0-dev1-r1)。仓库现已公开可见，历史收据保留创建时的可见性记录。Release 的 Windows / Mac ZIP 保持交付时的内容和 SHA-256；源码 ZIP 对应 Release 标签的 Git 提交，包含当时的分发说明和复核收据。首页和社区文档的后续更新在 `main`，不覆盖已有标签或二进制包。下载后可用同页的 `SHA256SUMS.txt` 核对。
+代码保存在 [私有仓库](https://github.com/jianyuanliljy-hub/blr-mem-workbench)，成品在 [v0.1.0-dev1-r1 预览版](https://github.com/jianyuanliljy-hub/blr-mem-workbench/releases/tag/v0.1.0-dev1-r1)。访问需要仓库权限。Release 的 Windows / Mac ZIP 保持交付时的内容和 SHA-256；源码 ZIP 对应 Release 标签的 Git 提交，包含更新后的分发说明和复核收据。下载后可用同页的 `SHA256SUMS.txt` 核对。
 
 `r1` 仅修订源码交付：首次 Windows CI 的两项报告测试使用系统默认 CP1252 读取 UTF-8 中文而失败，现已在测试中显式指定 UTF-8。应用源码、算法、科学默认参数和两个程序 ZIP 均未因此改变。保留最初的 Git 标签和失败运行供追溯，以修订标签交付更新的源码与检查记录。
 
@@ -19,9 +19,7 @@
 ## 已准备的目录
 
 ```text
-README.md（同页双语，默认英文）
-README_EN.md / README_ZH.md（兼容入口）
-CONTRIBUTING.md / NOTICE.md / CITATION.cff
+README.md / NOTICE.md / CITATION.cff
 pyproject.toml / MANIFEST.in / provenance.json
 1D/ / 2D/
 src/blr_rm/
