@@ -6,6 +6,8 @@ __pycache__/
 *.egg-info/
 build/
 dist/
+release_autumn/
+release_autumn_final/
 deliverables/
 evidence/
 blr_outputs/
