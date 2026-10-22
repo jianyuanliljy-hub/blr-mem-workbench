@@ -21,6 +21,9 @@ ENGINE = 'autumn_normalized_joint_mem'
 def fit(meta, obs, cfg, c_err, l_err):
     from .data import forward_matrix
 
+    if obs['delays'][0] != 0:
+        raise ValueError('Autumn solver requires delay_min=0; it does not silently change the delay grid')
+
     with _LOCK, tempfile.TemporaryDirectory(prefix='blr_autumn_') as temp:
         temp = Path(temp)
         mask = obs['time_mask']
@@ -51,6 +54,8 @@ def fit(meta, obs, cfg, c_err, l_err):
             'MEM_ALPHA_MAP': str(cfg.get('alpha_map', cfg.get('alpha', .2))),
             'MEM_ALPHA_C': str(cfg.get('alpha_c', 1200.)),
             'MEM_ALPHA_LBG': str(cfg.get('alpha_lbg', .02)),
+            'MEM_SMOOTHNESS_RATIO': str(cfg.get('smoothness_ratio', 1.)),
+            'MEM_JAX_CACHE_DIR': '',
         }
         previous = {key: os.environ.get(key) for key in env}
         try:
@@ -91,7 +96,12 @@ def fit(meta, obs, cfg, c_err, l_err):
                           default_continuum=ns['q_C']*cn,
                           default_background=ns['q_L_bg']*ln,
                           c_error_used=c_err, l_error_used=l_err)
-            diag = dict(optimizer_success=True, final_inner_converged=True,
+            point = np.r_[p.ravel()*cn/ln, c/cn, bg/ln]
+            objective, _ = ns['objective_Q_with_manual_gradient'](point, amap, ac, abg)
+            diag = dict(optimizer_success=all(history['optimizer_success']),
+                        final_inner_converged=history['research_inner_converged'],
+                        final_default_converged=history['research_default_converged'],
+                        objective_F=float(objective), objective_Q=-float(objective),
                         final_default_change=float(history['default_change'][-1]),
                         objective_convention='mean_chi2_C+mean_chi2_L-sum(alpha*S/sum(default))',
                         continuum_errors_rescaled=False, defaults_updated=True,

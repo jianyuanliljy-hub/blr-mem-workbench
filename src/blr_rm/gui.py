@@ -29,7 +29,7 @@ class Workbench:
         self.buttons = []
         self.last_report = None
         self.last_output = None
-        root.title("BLR MEM 工作台 · 0.1.0 预览版")
+        root.title("BLR MEM 工作台 · 秋季优化器 0.1.0.dev2")
         height = min(800, root.winfo_screenheight() - 90)
         root.geometry(f"1100x{height}")
         root.minsize(1000, min(700, height))
@@ -217,7 +217,7 @@ class Workbench:
         self.fit_config.set_value({'engine': 'autumn_normalized_joint_mem'})
         self.grid.set(
             json.dumps(
-                {"alpha": [0.05, 0.2, 1.0]} if dim == 1 else {"alpha_map": [100.0, 1000.0, 10000.0]},
+                {"alpha_map": [0.02, 0.2, 2.0]},
                 ensure_ascii=False,
             )
         )

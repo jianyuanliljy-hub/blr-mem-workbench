@@ -123,7 +123,7 @@ def reconstruct_mem2d(problem: MEM2DProblem, cfg: dict) -> MEM2DResult:
                 res=minimize(f,w[block]/bscale,jac=True,method="L-BFGS-B",bounds=bounds_all[block],
                              options={"maxiter":opt_max if block==problem.map_slice else max(100,opt_max//4),"ftol":1e-11,"gtol":1e-8,"maxcor":20,"maxls":40})
                 w[block]=res.x*bscale; block_nit+=int(res.nit); block_success=block_success and bool(res.success)
-            Q,gS,gchi=obj_full(w)[0],obj_full(w)[2],obj_full(w)[3]
+            Q,_,gS,gchi=obj_full(w)
             p,c,bg=problem.unpack(w)
             tests={"map":component_test(gchi[0],gS[0],p),"C":component_test(gchi[1],gS[1],c),"L_bg":component_test(gchi[2],gS[2],bg)}
             qrels={}
@@ -136,6 +136,8 @@ def reconstruct_mem2d(problem: MEM2DProblem, cfg: dict) -> MEM2DResult:
         change=max(float(np.sqrt(np.mean(np.log(np.clip(a,POSITIVE_FLOOR,None)/np.clip(b,POSITIVE_FLOOR,None))**2))) for a,b in ((target_map,qmap),(target_c,qc),(target_bg,qbg)))
         history.append({"outer":outer+1,"cycles":cyc+1,"block_nit":block_nit,"optimizer_success":int(block_success),"inner_converged":int(inner_converged),"chi2_C":cc,"chi2_L":cl,"reduced_chi2_C":cc/problem.nc,"reduced_chi2_L":cl/max(problem.nv*int(problem.time_mask.sum()),1),"default_change":change,**{f"TEST_{k}":v for k,v in tests.items()},**{f"qgrad_{k}":v for k,v in qrels.items()}})
         all_success=all_success and block_success
+        if not inner_converged or change <= float(cfg.get("default_change_tolerance", 2e-3)):
+            break
         if outer==outer_max-1: break
         def damp(q,t): return np.exp((1-damping)*np.log(np.clip(q,POSITIVE_FLOOR,None))+damping*np.log(np.clip(t,POSITIVE_FLOOR,None)))
         qmap=damp(qmap,target_map); qc=damp(qc,target_c); qbg=damp(qbg,target_bg)

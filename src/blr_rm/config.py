@@ -31,7 +31,24 @@ def defaults(dimension: int = 1) -> dict:
     }
 
 
+AUTUMN_ENGINE = 'autumn_normalized_joint_mem'
+
+
 def solver_defaults(dimension: int) -> dict:
+    if isinstance(dimension, bool) or dimension not in (1, 2):
+        raise ValueError('dimension 只支持 1 或 2')
+    return {
+        'engine': AUTUMN_ENGINE, 'gradient_backend': 'manual',
+        'jax_device': 'cpu', 'jax_jit': False, 'use_numba': False, 'adam_steps': 40,
+        'alpha_map': .2, 'alpha_c': 1200., 'alpha_lbg': .02,
+        'smoothness_ratio': 1., 'default_iterations': 1000,
+        'optimizer_maxiter': 2400, 'default_damping': .5,
+        'test_threshold': 1e-5, 'q_gradient_threshold': .003,
+        'default_change_tolerance': .01,
+    }
+
+
+def legacy_solver_defaults(dimension: int) -> dict:
     if dimension == 1:
         return {
             "engine": "joint_mem_1d_scaled_fixed_default",
@@ -142,23 +159,15 @@ def regular_grid(start: float, stop: float, step: float) -> np.ndarray:
 
 
 def resolved_solver(dimension: int, overrides: dict | None = None) -> dict:
-    cfg = copy.deepcopy(solver_defaults(dimension))
     overrides = {} if overrides is None else overrides
     if not isinstance(overrides, dict):
         raise ValueError("优化配置必须是 JSON 对象")  # noqa: TRY004 -- JSON 配置错误统一使用 ValueError。
-    autumn = overrides.get('engine') == 'autumn_normalized_joint_mem'
-    if autumn:
-        cfg.update(engine='autumn_normalized_joint_mem', gradient_backend='manual',
-                   jax_device='cpu', jax_jit=False, use_numba=False, adam_steps=40,
-                   alpha_map=.2, alpha_c=1200., alpha_lbg=.02,
-                   smoothness_ratio=1., default_iterations=1000,
-                   optimizer_maxiter=800, default_damping=.5,
-                   test_threshold=1e-5, q_gradient_threshold=.003,
-                   default_change_tolerance=.01)
+    autumn = overrides.get('engine', AUTUMN_ENGINE) == AUTUMN_ENGINE
+    cfg = copy.deepcopy(solver_defaults(dimension) if autumn else legacy_solver_defaults(dimension))
     if set(overrides) - set(cfg):
         raise ValueError(f"未识别的优化参数: {sorted(set(overrides) - set(cfg))}")
     cfg.update(overrides)
-    if not autumn and cfg["engine"] != solver_defaults(dimension)["engine"]:
+    if not autumn and cfg["engine"] != legacy_solver_defaults(dimension)["engine"]:
         raise ValueError("engine 必须与数据维度对应")
     for name, value in cfg.items():
         if name == "engine":

@@ -36,7 +36,7 @@ def main():
         from blr_rm.cli import main as cli_main
 
         return cli_main(arguments[1:] if arguments[:1] == ["--cli"] else arguments)
-    if not arguments or arguments[0].startswith("--dimension") or "--gui-smoke" in arguments:
+    if not arguments or (arguments[0] == '--dimension' and len(arguments) == 2) or "--gui-smoke" in arguments:
         parser = argparse.ArgumentParser()
         parser.add_argument("--dimension", type=int, choices=(1, 2), default=1)
         parser.add_argument("--gui-smoke", action="store_true")

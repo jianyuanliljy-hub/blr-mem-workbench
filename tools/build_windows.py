@@ -44,26 +44,15 @@ def main():
         shutil.copytree(root / name, dist / name)
     for name in ("README.md", "NOTICE.md", "provenance.json"):
         shutil.copy2(root / name, dist / name)
+    for dimension in (1, 2):
+        for name in ('GenerateData', 'BatchGenerate', 'MEMOptimizer', 'Detector', 'Analysis'):
+            (dist/f'{dimension}D/{name}.cmd').write_bytes(
+                (f'@echo off\r\n"%~dp0..\\{name}.exe" --dimension {dimension}\r\n').encode('ascii'))
     shutil.copy2(identity_path, dist / "build_identity.json")
-    subprocess.run([str(dist / "blr-rm.exe"), "--version"], cwd=dist, check=True)
-    subprocess.run(
-        [
-            str(dist / "blr-rm.exe"),
-            "benchmark",
-            "--profile",
-            "smoke",
-            "--out",
-            str(root / "build/binary-smoke"),
-        ],
-        cwd=dist,
-        check=True,
-    )
-    subprocess.run(
-        [str(dist / "BLRWorkbench.exe"), "--gui-smoke", "--dimension", "1"], cwd=dist, check=True, timeout=30
-    )
-    subprocess.run(
-        [str(dist / "BLRWorkbench.exe"), "--gui-smoke", "--dimension", "2"], cwd=dist, check=True, timeout=30
-    )
+    from validate_distribution import validate
+    validate(dist, root/'build/frozen-validation')
+    shutil.copy2(root/'build/frozen-validation/validation.json', dist/'validation.json')
+    shutil.make_archive(str(root/'dist/BLR-MEM-Windows-x64'), 'zip', root/'dist', 'BLR-RM')
     print(dist)
 
 

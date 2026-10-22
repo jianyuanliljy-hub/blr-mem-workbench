@@ -9,7 +9,7 @@ from pathlib import Path
 
 import numpy as np
 
-from .config import defaults, solver_defaults, resolved_solver
+from .config import AUTUMN_ENGINE, defaults, legacy_solver_defaults, resolved_solver
 from .data import generate
 from .detector import inspect_dataset, inspect_result, recovery_metrics
 from .report import write_html
@@ -50,14 +50,14 @@ def _cases(profile):
     return records
 
 
-def run_benchmark(output, profile="smoke", resume=False, progress=None, engine=None):
+def run_benchmark(output, profile="smoke", resume=False, progress=None, engine=AUTUMN_ENGINE):
     output = Path(output)
     cases = _cases(profile)
     protocol = {
         "schema_version": 1,
         "profile": profile,
         "cases": cases,
-        "solver_defaults": {str(dim): resolved_solver(dim, {'engine': engine}) if engine else solver_defaults(dim) for dim in (1, 2)},
+        "solver_defaults": {str(dim): resolved_solver(dim, {'engine': engine}) if engine else legacy_solver_defaults(dim) for dim in (1, 2)},
         "selection": "Frozen example defaults; no truth tuning or case removal",
         "factorial_design": "Different independent driver seed in every cell; descriptive factor comparison",
         "environment": environment(),

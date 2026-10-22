@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from blr_rm.config import defaults, read_config, resolved_solver, solver_defaults, validate_config
+from blr_rm.config import defaults, read_config, resolved_solver, solver_defaults, legacy_solver_defaults, validate_config
 from blr_rm.data import batch_generate, generate, simulate, validate_observations
 from blr_rm.detector import (
     independent_objective_gradient,
@@ -149,7 +149,7 @@ def test_scaled_1d_fit_converges_and_is_checked_independently(noisy_case, tmp_pa
 
 
 def test_early_stop_is_not_reported_as_numerical_success(noisy_case, tmp_path):
-    checked = optimize(noisy_case, tmp_path / "fit", {"max_iterations": 1})
+    checked = optimize(noisy_case, tmp_path / "fit", {**legacy_solver_defaults(1), "max_iterations": 1})
     assert checked["checks"]["numerical_convergence"] == "FAIL"
     assert not checked["optimizer_success"]
 
@@ -195,7 +195,7 @@ def test_batch_resume_preserves_identity_and_rejects_changed_protocol(tmp_path):
 
 
 def test_scan_is_exhaustive_has_no_truth_and_never_selects_best(noisy_case, tmp_path):
-    grid = {"alpha": [0.1, 0.2], "stiffness_weight": [1.0, 2.0]}
+    grid = {"alpha_map": [0.1, 0.2], "alpha_c": [600.0, 1200.0]}
     report = scan(noisy_case, tmp_path / "scan", grid)
     assert report["count"] == 4
     assert report["selection"] == "NONE_PURE_SCAN"
@@ -290,7 +290,7 @@ def test_independent_2d_gradient_agrees_with_existing_production_objective():
     from blr_rm._vendor.mem2d import MEM2DProblem, entropy_positive
 
     meta, obs, state = _small_problem(2)
-    cfg = solver_defaults(2)
+    cfg = legacy_solver_defaults(2)
     problem = MEM2DProblem(
         obs["t_c"],
         obs["c_obs"],
@@ -324,7 +324,7 @@ def test_cli_propagates_numerical_scan_failure(noisy_case, tmp_path, capsys):
     from blr_rm.cli import main
 
     config = tmp_path / "short.json"
-    config.write_text(json.dumps({"max_iterations": 1}))
+    config.write_text(json.dumps({**legacy_solver_defaults(1), "max_iterations": 1}))
     grid = tmp_path / "grid.json"
     grid.write_text(json.dumps({"alpha": [0.2]}))
     status = main(

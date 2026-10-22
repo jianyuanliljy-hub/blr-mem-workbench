@@ -76,9 +76,9 @@ def dispatch(args):
             return batch_generate(cfg, args.count, args.out, args.resume)
         return {"output": str(generate(cfg, args.out, not args.no_plots))}
     if args.command in ("optimize", "scan"):
-        cfg = json.loads(args.config.read_text(encoding="utf-8")) if args.config else {'engine':'autumn_normalized_joint_mem'}
+        cfg = json.loads(args.config.read_text(encoding="utf-8-sig")) if args.config else None
         if args.command == "scan":
-            grid = json.loads(args.grid.read_text(encoding="utf-8"))
+            grid = json.loads(args.grid.read_text(encoding="utf-8-sig"))
             return scan(args.data, args.out, grid, cfg, args.error_floor, args.resume)
         return optimize(args.data, args.out, cfg, args.error_floor)
     if args.command == "check":

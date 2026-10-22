@@ -157,6 +157,13 @@ def independent_objective_gradient(obs, solution, cfg, c0, dimension):
             tests[name] = 1.0
         else:
             tests[name] = float(1 + np.clip(np.dot(g, r) / (ng * nr), -1, 1))
+        if autumn and name == 'background':
+            # Independent check in physical units of the profiled scalar solves.
+            curvature = 2.0 * line_weight.sum(axis=1) / (p.shape[0]*obs['time_mask'].sum()) + weight/value
+            step_relative = np.abs(full) / (curvature * np.maximum(value, 1e-300))
+            if np.all(np.isfinite(step_relative)) and np.all(step_relative <= 32*np.finfo(float).eps):
+                relative_blocks[name] = 0.0
+                tests[name] = 0.0
     gradient = np.concatenate(gradients)
     parameters = np.concatenate([p.ravel(), c.ravel(), bg.ravel()])
     return {
