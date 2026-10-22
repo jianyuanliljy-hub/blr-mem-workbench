@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "date": "2026-10-20",
+  "date": "2026-10-22",
   "files": [
     {
       "source": "blr_mem_1d_week1/src/blr_mem/memecho.py",
@@ -20,8 +20,15 @@
       "source": "20260825-CNN 2D 测试/FULL_2D_EXPERIMENT/src2d/mem2d.py",
       "target": "src/blr_rm/_vendor/mem2d.py",
       "source_sha256": "4db64963c067ec9c86ac4c77a6597b161ffc1b9a52ae7947a51bdb75e09fc64c",
-      "packaged_sha256": "142f651aef94d34fe596bf7c4cae51b1fedb993573c8925e9c8b4668fdfab628",
-      "change": "Expose final frozen defaults in diagnostics only; objective, gradients and optimization are unchanged."
+      "packaged_sha256": "c9b1b8d80ee2039034d9a7ef86d6074567b819fa97005a2d1dbd589b16bc0825",
+      "change": "Legacy option: expose defaults, reuse final objective evaluation, stop before changing defaults on failed or already stable inner solve."
+    },
+    {
+      "source": "MEMECHO_2026秋季试用版/源码/023_0821.py",
+      "target": "src/blr_rm/autumn/023_0821.py",
+      "source_sha256": "e1aafa352602d49324e4c4ef8c3fcd5ac6cc16937b7036132e4700445d9cd0b0",
+      "packaged_sha256": "b3cdf1c973c78d1e82fcdc91d2d40a19356f3e6359cd346ba513dd32ffaa870c",
+      "change": "Author autumn engine adapted for packaged resources, single-channel defaults, CPU/GPU selection and independently checked background float-resolution guard. Original objective retained."
     }
   ],
   "external_code_copied": false,

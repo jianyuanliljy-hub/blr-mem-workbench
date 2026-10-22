@@ -4,7 +4,7 @@ import json
 
 import pytest
 
-from blr_rm.config import defaults
+from blr_rm.config import defaults, legacy_solver_defaults
 from blr_rm.data import generate
 from blr_rm.scan import scan
 from blr_rm.status import has_failures
@@ -15,13 +15,13 @@ from blr_rm.storage import read_json
 def short_scan(tmp_path):
     dataset = generate({**defaults(1), "noise_fraction": 0.05}, tmp_path / "data", plots=False)
     destination = tmp_path / "scan"
-    original = scan(dataset, destination, {"alpha": [0.2]}, {"max_iterations": 1})
+    original = scan(dataset, destination, {"alpha": [0.2]}, {**legacy_solver_defaults(1), "max_iterations": 1})
     assert original["points"][0]["check"]["checks"]["numerical_convergence"] == "FAIL"
     return dataset, destination, original
 
 
 def resume(dataset, destination):
-    return scan(dataset, destination, {"alpha": [0.2]}, {"max_iterations": 1}, resume=True)
+    return scan(dataset, destination, {"alpha": [0.2]}, {**legacy_solver_defaults(1), "max_iterations": 1}, resume=True)
 
 
 def test_resume_retains_actual_numerical_failure(short_scan):

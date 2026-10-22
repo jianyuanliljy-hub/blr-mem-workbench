@@ -1,0 +1,43 @@
+{
+  "checks": {
+    "floating_default_stability": "PASS",
+    "forward_consistency": "PASS",
+    "integrity": "PASS",
+    "numerical_convergence": "PASS"
+  },
+  "compute_seconds": 80.79582129998016,
+  "forward_relative_error": 5.101415953611438e-16,
+  "independent_numerics": {
+    "chi2_C": 2.3001673421086144,
+    "chi2_C_per_datum": 0.020722228307284814,
+    "chi2_L": 7588.35343119726,
+    "chi2_L_per_datum": 0.8338849924392593,
+    "component_tests": {
+      "background": 0.0,
+      "continuum": 4.261035968511351e-13,
+      "map": 8.432399223323728e-11
+    },
+    "log_gradient_inf": 7.351876640207087e-07,
+    "objective_F": 1.2770325114969863,
+    "objective_Q": -1.2770325114969863,
+    "relative_gradient_blocks": {
+      "background": 0.0,
+      "continuum": 9.235944231972618e-07,
+      "map": 1.2987060492084785e-05
+    }
+  },
+  "observation_id": "8058202f06aa6168560a8da6149612a21ef07034da3181c9af34a2c4cc69023f",
+  "optimizer_history_warning": "At least one optimizer call reported failure; final stationarity is assessed independently",
+  "optimizer_success": false,
+  "real_agn_validation": "NOT_RUN",
+  "schema_version": 1,
+  "scientific_acceptance": "NOT_ASSESSED",
+  "truth_metrics": {
+    "lag_centroid_error_days": -0.053203439407248254,
+    "raw_nmse": 0.08350984550710377,
+    "recovered_area": 0.9984075630503232,
+    "shape_nmse": 0.08376549140569943,
+    "true_area": 0.9999999999999999,
+    "velocity_centroid_error_kms": -2.1515880538274104
+  }
+}

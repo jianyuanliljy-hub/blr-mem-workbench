@@ -24,9 +24,10 @@ def _check_saved_point(dataset, point, config, error_floor):
 
 def scan(dataset, output, grid: dict, base_config: dict | None = None, error_floor=None, resume=False):
     meta, _ = load_observations(dataset)
+    base_config = resolved_solver(meta['dimension'], base_config)
     allowed = (
         {"alpha", "stiffness_weight"}
-        if meta["dimension"] == 1 and (base_config or {}).get('engine') != 'autumn_normalized_joint_mem'
+        if meta["dimension"] == 1 and base_config['engine'] != 'autumn_normalized_joint_mem'
         else {"alpha_map", "alpha_c", "alpha_lbg", "smoothness_ratio"}
     )
     if not isinstance(grid, dict) or not grid or set(grid) - allowed:
@@ -49,7 +50,6 @@ def scan(dataset, output, grid: dict, base_config: dict | None = None, error_flo
         count *= len(values)
     if count > 1024:
         raise ValueError("首版单次扫描最多 1024 点；请显式分批，避免误启动巨量计算")
-    base_config = resolved_solver(meta["dimension"], base_config)
     keys = sorted(grid)
     configs = [
         resolved_solver(meta["dimension"], {**base_config, **dict(zip(keys, point))})

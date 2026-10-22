@@ -1,0 +1,9 @@
+{
+  "dimension": 2,
+  "n_velocity": 100,
+  "duration_days": 180.0,
+  "cadence_days": 2.0,
+  "delay_max_days": 40.0,
+  "delay_step_days": 0.40404040404040403,
+  "noise_fraction": 0.05
+}

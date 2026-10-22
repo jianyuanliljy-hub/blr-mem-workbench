@@ -1,4 +1,4 @@
-name: Windows release package check
+name: Legacy dev1 release package check
 on:
   workflow_dispatch:
     inputs:

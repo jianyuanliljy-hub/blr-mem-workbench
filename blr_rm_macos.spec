@@ -9,6 +9,7 @@ from PyInstaller.utils.hooks import copy_metadata
 root = Path(SPECPATH)
 identity = Path(os.environ["BLR_MACOS_BUILD_IDENTITY"])
 metadata = [(str(identity), ".")]
+metadata += [(str(root / 'src/blr_rm/autumn/023_0821.py'), 'autumn')]
 for distribution in ["numpy", "scipy", "pandas", "matplotlib"]:
     metadata += copy_metadata(distribution)
 
@@ -17,7 +18,7 @@ a = Analysis(
     pathex=[str(root / "src")],
     binaries=[],
     datas=metadata,
-    hiddenimports=["tkinter", "matplotlib.backends.backend_agg"],
+    hiddenimports=["tkinter", "matplotlib.backends.backend_agg", "matplotlib.pyplot", "scipy.optimize", "scipy.sparse", "scipy.linalg"],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],

@@ -89,6 +89,12 @@ class ConfigForm(ttk.Frame):
                     state="readonly",
                     width=23,
                 ).pack(side="left", fill="x", expand=True)
+            elif key in ('gradient_backend', 'jax_device', 'jax_jit', 'use_numba'):
+                choices = {'gradient_backend': ('manual', 'jax'),
+                           'jax_device': ('cpu', 'auto', 'gpu'),
+                           'jax_jit': ('True', 'False'), 'use_numba': ('True', 'False')}
+                ttk.Combobox(cell, textvariable=variable, values=choices[key],
+                             state='readonly', width=16).pack(side='left', fill='x', expand=True)
             else:
                 ttk.Entry(cell, textvariable=variable, width=16).pack(side="left", fill="x", expand=True)
             self.variables[key] = (variable, convert, label)

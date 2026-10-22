@@ -9,7 +9,7 @@ metadata += [(str(root / 'src/blr_rm/autumn/023_0821.py'), 'autumn')]
 for distribution in ["numpy", "scipy", "pandas", "matplotlib"]:
     metadata += copy_metadata(distribution)
 binaries = []
-hiddenimports = ['tkinter', 'matplotlib.backends.backend_agg', 'scipy.optimize', 'scipy.sparse', 'scipy.linalg']
+hiddenimports = ['tkinter', 'matplotlib.backends.backend_agg', 'matplotlib.pyplot', 'scipy.optimize', 'scipy.sparse', 'scipy.linalg']
 for package in ('jax', 'jaxlib', 'numba', 'llvmlite'):
     result = collect_all(package, filter_submodules=lambda n: not any(
         s in n for s in ('test', 'pallas', 'mosaic', 'triton', 'source_mapper',
