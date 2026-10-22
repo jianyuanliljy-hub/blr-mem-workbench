@@ -103,9 +103,10 @@ def independent_objective_gradient(obs, solution, cfg, c0, dimension):
     residual = predicted - obs["l_obs"]
     chi_c = float(np.sum(((c - obs["c_obs"]) / ec) ** 2))
     chi_l = float(np.sum(residual**2 * line_weight))
-    factor = 1.0 if dimension == 1 else 2.0
-    wr = factor * residual * line_weight
-    gc_data = factor * (c - obs["c_obs"]) / ec**2
+    autumn = cfg['engine'] == 'autumn_normalized_joint_mem'
+    factor = 2.0 if autumn or dimension == 2 else 1.0
+    wr = factor * residual * line_weight / (p.shape[0]*obs['time_mask'].sum() if autumn else 1)
+    gc_data = factor * (c - obs["c_obs"]) / ec**2 / (len(c) if autumn else 1)
     gp_data = np.zeros_like(p)
     gb_data = wr.sum(axis=1)
     step = float(np.diff(obs["delays"])[0])
@@ -120,7 +121,13 @@ def independent_objective_gradient(obs, solution, cfg, c0, dimension):
         influence = (wr * p[:, j, None]).sum(axis=0) * step
         np.add.at(gc_data, left, influence * (1 - fraction))
         np.add.at(gc_data, right, influence * fraction)
-    if dimension == 1:
+    if autumn:
+        weights = tuple(cfg[key]/np.sum(default) for key, default in
+                        zip(('alpha_map', 'alpha_c', 'alpha_lbg'), (qp, qc, qb)))
+        entropy = sum(a*_entropy(value, default) for a, value, default in
+                      zip(weights, (p, c, bg), (qp, qc, qb)))
+        objective = chi_c/len(c) + chi_l/(p.shape[0]*obs['time_mask'].sum()) - entropy
+    elif dimension == 1:
         dc = float(times[1] - times[0])
         weights = (cfg["alpha"] * cfg["stiffness_weight"] * step, cfg["alpha"] * dc, 0.0)
         entropy = cfg["alpha"] * (_entropy(c, qc, dc) + cfg["stiffness_weight"] * _entropy(p, qp, step))
@@ -207,7 +214,7 @@ def inspect_result(dataset: str | Path, result: str | Path, include_truth: bool 
         obs, solution, run["solver_config"], meta["c0"], meta["dimension"]
     )
     diag = read_json(result / "diagnostics.json")
-    if meta["dimension"] == 1:
+    if meta["dimension"] == 1 and run['solver_config']['engine'] != 'autumn_normalized_joint_mem':
         converged = (
             diag["optimizer_success"]
             and numerical["log_gradient_inf"] <= run["solver_config"]["stationarity_tolerance"]

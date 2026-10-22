@@ -61,7 +61,7 @@ class ConfigForm(ttk.Frame):
                     ("stiffness_weight", "响应相对权重 W", float),
                     ("max_iterations", "最大迭代次数", int),
                 ]
-                if dimension == 1
+                if dimension == 1 and value['engine'] != 'autumn_normalized_joint_mem'
                 else [
                     ("alpha_map", "响应熵权重 α map", float),
                     ("alpha_c", "连续谱熵权重 α C", float),
@@ -69,6 +69,11 @@ class ConfigForm(ttk.Frame):
                     ("smoothness_ratio", "时延/速度平滑比", float),
                 ]
             )
+        if self.kind != 'data' and value['engine'] == 'autumn_normalized_joint_mem':
+            fields += [('gradient_backend', '梯度 manual / jax', str),
+                       ('jax_device', '设备 cpu / gpu / auto', str),
+                       ('jax_jit', 'JIT: true / false', lambda s: json.loads(s.lower())),
+                       ('use_numba', 'Numba: true / false', lambda s: json.loads(s.lower()))]
         for index, (key, label, convert) in enumerate(fields):
             row, column = divmod(index, 2)
             cell = ttk.Frame(self)

@@ -22,9 +22,6 @@ def main():
     root = Path(__file__).resolve().parents[1]
     patterns = [
         "README.md",
-        "README_ZH.md",
-        "README_EN.md",
-        "CONTRIBUTING.md",
         "NOTICE.md",
         "CITATION.cff",
         "pyproject.toml",
@@ -45,14 +42,11 @@ def main():
         "tools/*.py",
         "tools/*.c",
         "docs/**/*.md",
-        "docs/**/*.bib",
         "docs/**/*.png",
-        "docs/**/*.svg",
         "docs/**/*.csv",
         "docs/**/*.json",
         "docs/**/*.xml",
         ".github/workflows/*.yml",
-        ".github/ISSUE_TEMPLATE/*.yml",
     ]
     files = {path for pattern in patterns for path in root.glob(pattern) if path.is_file()}
     if args.with_evidence:

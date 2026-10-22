@@ -52,6 +52,9 @@ def fit_arrays(meta: dict, obs: dict, cfg: dict, error_floor=None) -> tuple[dict
         raise ValueError("既有正联合 MEM 要求观测通量为正；请检查背景/标定，程序不自动平移或裁剪数据")
     step = float(np.diff(obs["delays"])[0])
     dimension = meta["dimension"]
+    if cfg['engine'] == 'autumn_normalized_joint_mem':
+        from .autumn_bridge import fit
+        return fit(meta, obs, cfg, c_err, l_err)
     if dimension == 1:
         mask = obs["time_mask"]
         problem = build_joint_echo_problem(

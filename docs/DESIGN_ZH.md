@@ -32,8 +32,6 @@
 
 首版增加固定的对角尺度预处理：`log p = log p_initial + D z`，`D` 由初值处的 Gauss–Newton 对角尺度计算。仍调用原目标函数和解析导数，链式导数为 `dF/dz = D dF/dlog p`。没有更改噪声、正则化强度、默认图像或数据。导数测试和目标函数等值测试验证了坐标变换。
 
-L-BFGS-B 的算法参考 [Zhu et al. (1997)](REFERENCES.md#bound-constrained-optimization)，数值库参考 [Virtanen et al. (2020)](REFERENCES.md#scientific-computing)。
-
 这会改变优化轨迹，因此本包不是历史优化器轨迹的逐位复现。源代码原样保留；新包的数值变化明确记录在结果中。
 
 ### 成功标志含义不一致
@@ -43,8 +41,6 @@ L-BFGS-B 的算法参考 [Zhu et al. (1997)](REFERENCES.md#bound-constrained-opt
 检测器独立重算最终梯度和原有 TEST 条件，保留历史失败标志。最后固定默认图像下的数值收敛、浮动默认图像是否稳定分别报告。没有通过增加容差把失败改成通过。
 
 ## 3. 数学约定和单位
-
-响应函数的回声映射框架见 [Blandford & McKee (1982)](REFERENCES.md#reverberation-mapping)；联合最大熵、正相对熵与默认图像的背景见 [Horne (1994)](REFERENCES.md#maximum-entropy-echo-mapping)。下列离散化、单位和目标因子以当前实现为准。
 
 统一前向关系：
 
@@ -72,7 +68,7 @@ L-BFGS-B 的算法参考 [Zhu et al. (1997)](REFERENCES.md#bound-constrained-opt
 
 二维熵采用原实现的像素求和。整体因子与网格约定会改变超参数的尺度。禁止将两种维度或不同网格的 alpha 数字当作可直接比较的物理量。
 
-连续谱由有限长高斯幂律傅里叶过程生成，同时随机化振幅和相位，方法背景见 [Timmer & König (1995)](REFERENCES.md#power-law-light-curves)。本包还按样本标准差归一化。它只是当前合成验证模型；尚未加入长序列裁剪、红噪声泄漏、复杂标定误差或完整 AGN 物理模型。
+连续谱由有限长高斯幂律傅里叶过程生成，同时随机化振幅和相位。它只是当前合成验证模型；尚未加入长序列裁剪、红噪声泄漏、复杂标定误差或完整 AGN 物理模型。
 
 ## 4. 程序结构
 
@@ -117,8 +113,6 @@ flowchart LR
 | 模拟恢复指标 | 对这批合成真值的恢复表现 | 真实 AGN 适用性 |
 
 无噪声数据不自动填充虚假误差。没有真值的真实观测可按接口提供 `observations.npz` 和元数据；当前首版没有经过真实观测验证，也没有导入向导。
-
-已知真值的恢复检验与物理解读的文献背景见 [Mangham et al. (2019)](REFERENCES.md#controlled-recovery-tests)。该论文为 MEMEcho/CARAMEL 盲测；本包的合成验证使用独立协议，没有复现其基准。真实观测下的 MEMEcho 研究可参阅 [Horne et al. (2021)](REFERENCES.md#observational-context)。
 
 ## 6. 默认值和纯扫描
 

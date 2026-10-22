@@ -26,7 +26,7 @@ def scan(dataset, output, grid: dict, base_config: dict | None = None, error_flo
     meta, _ = load_observations(dataset)
     allowed = (
         {"alpha", "stiffness_weight"}
-        if meta["dimension"] == 1
+        if meta["dimension"] == 1 and (base_config or {}).get('engine') != 'autumn_normalized_joint_mem'
         else {"alpha_map", "alpha_c", "alpha_lbg", "smoothness_ratio"}
     )
     if not isinstance(grid, dict) or not grid or set(grid) - allowed:

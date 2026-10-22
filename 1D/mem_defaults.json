@@ -1,9 +1,1 @@
-{
-  "alpha": 0.2,
-  "engine": "joint_mem_1d_scaled_fixed_default",
-  "function_tolerance": 1e-15,
-  "gradient_tolerance": 1e-07,
-  "max_iterations": 1200,
-  "stationarity_tolerance": 0.001,
-  "stiffness_weight": 1.0
-}
+{"engine":"autumn_normalized_joint_mem","alpha_map":0.2,"alpha_c":1200.0,"alpha_lbg":0.02,"gradient_backend":"manual","jax_device":"cpu","jax_jit":false,"use_numba":false}

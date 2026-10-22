@@ -52,6 +52,7 @@ def parser():
     cmd.add_argument("--profile", choices=("smoke", "validation"), default="smoke")
     cmd.add_argument("--out", type=Path, required=True)
     cmd.add_argument("--resume", action="store_true")
+    cmd.add_argument('--solver-engine', choices=('autumn', 'legacy'), default='autumn')
     commands.add_parser("gui", help="打开图形界面")
     return root
 
@@ -75,7 +76,7 @@ def dispatch(args):
             return batch_generate(cfg, args.count, args.out, args.resume)
         return {"output": str(generate(cfg, args.out, not args.no_plots))}
     if args.command in ("optimize", "scan"):
-        cfg = json.loads(args.config.read_text(encoding="utf-8")) if args.config else None
+        cfg = json.loads(args.config.read_text(encoding="utf-8")) if args.config else {'engine':'autumn_normalized_joint_mem'}
         if args.command == "scan":
             grid = json.loads(args.grid.read_text(encoding="utf-8"))
             return scan(args.data, args.out, grid, cfg, args.error_floor, args.resume)
@@ -93,6 +94,7 @@ def dispatch(args):
             args.profile,
             args.resume,
             progress=lambda value: print(value, file=sys.stderr, flush=True),
+            engine='autumn_normalized_joint_mem' if args.solver_engine == 'autumn' else None,
         )
     from .gui import main as gui_main
 

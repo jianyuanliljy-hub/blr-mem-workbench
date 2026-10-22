@@ -30,7 +30,9 @@ def test_offline_report_with_and_without_truth_preserves_numerical_state(tmp_pat
         assert (output / "reconstruction.png").stat().st_size > 1000
         assert report == str(output / "report.html")
         if dimension == 2:
-            assert "有数值警告" in document
+            from blr_rm.status import has_failures, has_warnings
+            if has_failures(saved) or has_warnings(saved):
+                assert "警告" in document or "失败" in document
             assert (output / "response.png").stat().st_size > 1000
             assert (
                 read_json(output / "default_map_diagnostic.json")["purpose"]

@@ -6,6 +6,14 @@ from pathlib import Path
 
 
 def main():
+    if '--autumn-solver' in sys.argv:
+        import os
+        import runpy
+        resources = Path(getattr(sys, '_MEIPASS', Path(__file__).resolve().parents[1] / 'src/blr_rm'))
+        with open(os.environ['MEM_LOG_FILE'], 'a', encoding='utf-8', buffering=1) as log:
+            sys.stdout = sys.stderr = log
+            runpy.run_path(str(resources / 'autumn/023_0821.py'), run_name='__main__')
+        return 0
     aliases = {
         "GenerateData": "generate",
         "BatchGenerate": "batch",

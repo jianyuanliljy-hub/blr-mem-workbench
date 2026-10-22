@@ -1,0 +1,52 @@
+name: Windows release package check
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Preview release tag to check
+        required: true
+        default: v0.1.0-dev1-r1
+        type: string
+permissions:
+  contents: read
+jobs:
+  windows-package:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    env:
+      PYTHONUTF8: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Download and verify the delivered package
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          gh release download "$env:RELEASE_TAG" --repo "$env:GITHUB_REPOSITORY" --pattern "*_Windows_x64.zip" --pattern "SHA256SUMS.txt" --dir download
+          if ($LASTEXITCODE -ne 0) { throw "Release download failed" }
+          $archives = @(Get-ChildItem "download/*_Windows_x64.zip")
+          if ($archives.Count -ne 1) { throw "Expected one Windows archive" }
+          $archive = $archives[0]
+          $lines = @(Get-Content "download/SHA256SUMS.txt" | Where-Object { $_.EndsWith("  $($archive.Name)") })
+          if ($lines.Count -ne 1) { throw "Expected one matching checksum" }
+          $expected = ($lines[0] -split '\s+')[0]
+          if ((Get-FileHash "$($archive.FullName)" -Algorithm SHA256).Hash -ine $expected) { throw "SHA-256 mismatch" }
+          Expand-Archive -LiteralPath "$($archive.FullName)" -DestinationPath "build/程序 中文 路径"
+          $launchers = @(Get-ChildItem "build/程序 中文 路径" -Filter "BLRWorkbench.exe" -Recurse)
+          if ($launchers.Count -ne 1) { throw "Expected one GUI launcher" }
+          python "tools/validate_windows_portable.py" --bundle "$($launchers[0].DirectoryName)" --out "build/native-windows-check"
+          if ($LASTEXITCODE -ne 0) { throw "Native package validation failed" }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: windows-release-package-check
+          path: build/native-windows-check/
