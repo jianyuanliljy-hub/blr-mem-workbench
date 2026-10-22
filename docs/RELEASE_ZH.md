@@ -19,7 +19,8 @@
 ## 已准备的目录
 
 ```text
-README.md（英文） / README_ZH.md（中文）
+README.md（同页双语，默认英文）
+README_EN.md / README_ZH.md（兼容入口）
 CONTRIBUTING.md / NOTICE.md / CITATION.cff
 pyproject.toml / MANIFEST.in / provenance.json
 1D/ / 2D/
