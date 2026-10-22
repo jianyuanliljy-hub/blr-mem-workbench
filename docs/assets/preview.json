@@ -45,5 +45,5 @@
   "source_files_unchanged": true,
   "rendering": "Matplotlib; nearest-neighbor cells; true/recovered maps share vmin=0 and vmax.",
   "reproduce": "python tools/render_readme_preview.py --example <extracted-bundle>/examples/2D --out docs/assets",
-  "image_sha256": "0a4c472d03cc0b83c19aa5b24cc9e35fec1fcfe4a49bf58fa05f772c1dba40b8"
+  "image_sha256": "e0127f3218ea9054620fb6d2e2b8acde9ca193d0644a9c7a6c466085eeff8f0a"
 }

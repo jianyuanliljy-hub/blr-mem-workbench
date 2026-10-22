@@ -58,7 +58,7 @@ def render(example: Path, output: Path):
         )
         fig.text(0.052, 0.922, "BLR / MEM", color=teal, size=11, weight="bold")
         fig.text(0.948, 0.922, "SYNTHETIC EXAMPLE  /  02", color=muted, size=9, ha="right")
-        fig.text(0.052, 0.851, "From light curves to response maps.", color=ink, size=24, weight="bold")
+        fig.text(0.052, 0.851, "Maximum-entropy response reconstruction.", color=ink, size=24, weight="bold")
         fig.text(0.052, 0.811, "Observed inputs. Joint MEM. Independent checks.", color=muted, size=11)
 
         def axes(rect, title):

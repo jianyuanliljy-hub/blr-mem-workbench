@@ -1,4 +1,4 @@
-include README.md README_EN.md CONTRIBUTING.md NOTICE.md CITATION.cff pyproject.toml provenance.json .gitignore
+include README.md README_ZH.md README_EN.md CONTRIBUTING.md NOTICE.md CITATION.cff pyproject.toml provenance.json .gitignore
 include blr_rm_windows.spec
 include blr_rm_macos.spec
 include requirements-tested-*.txt

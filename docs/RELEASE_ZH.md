@@ -19,7 +19,8 @@
 ## 已准备的目录
 
 ```text
-README.md / NOTICE.md / CITATION.cff
+README.md（英文） / README_ZH.md（中文）
+CONTRIBUTING.md / NOTICE.md / CITATION.cff
 pyproject.toml / MANIFEST.in / provenance.json
 1D/ / 2D/
 src/blr_rm/

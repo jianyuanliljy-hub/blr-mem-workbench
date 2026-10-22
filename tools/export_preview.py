@@ -22,6 +22,7 @@ def main():
     root = Path(__file__).resolve().parents[1]
     patterns = [
         "README.md",
+        "README_ZH.md",
         "README_EN.md",
         "CONTRIBUTING.md",
         "NOTICE.md",
