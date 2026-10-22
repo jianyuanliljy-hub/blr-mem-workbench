@@ -214,7 +214,7 @@ class Workbench:
         dim = self.dimension.get()
         self.data_config.dimension = self.fit_config.dimension = dim
         self.data_config.set_value(defaults(dim))
-        self.fit_config.set_value(solver_defaults(dim))
+        self.fit_config.set_value({'engine': 'autumn_normalized_joint_mem'})
         self.grid.set(
             json.dumps(
                 {"alpha": [0.05, 0.2, 1.0]} if dim == 1 else {"alpha_map": [100.0, 1000.0, 10000.0]},
@@ -343,7 +343,7 @@ class Workbench:
         out, profile = self._new_output("benchmark"), self.profile.get()
 
         def action():
-            summary = run_benchmark(out, profile, progress=lambda text: self.events.put(("progress", text)))
+            summary = run_benchmark(out, profile, progress=lambda text: self.events.put(("progress", text)), engine='autumn_normalized_joint_mem')
             return {
                 "benchmark": str(out),
                 "report": str(out / "report.html"),
