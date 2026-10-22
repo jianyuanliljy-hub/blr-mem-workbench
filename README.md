@@ -39,7 +39,7 @@ BLR MEM Workbench brings synthetic-data generation, joint maximum-entropy invers
   <img src="docs/assets/overview.png" width="1000" alt="Original program report figure: true and recovered velocity–delay maps above, delay and velocity marginal responses below">
 </p>
 
-<p align="center"><sub>Original figure from the bundled 2D synthetic report. The maps share a color scale; lower panels show delay and velocity marginals. 9 × 16 grid, 5% variability noise. <a href="docs/assets/preview.json">Source and checks</a>.</sub></p>
+<p align="center"><sub>Original figure from the bundled 2D synthetic report. The maps share a color scale; lower panels show delay and velocity marginals. 9 × 16 grid, 5% variability noise. <a href="docs/assets/overview.png">Full-size figure</a> · <a href="docs/assets/preview.json">Source and checks</a>.</sub></p>
 
 ## Why use it
 
