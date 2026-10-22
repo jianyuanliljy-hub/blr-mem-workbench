@@ -1,0 +1,49 @@
+{
+  "kind": "readme_illustration_of_existing_synthetic_result",
+  "source": "Windows/macOS 0.1.0.dev1 bundle / examples/2D",
+  "observation_id": "e3d8ec9e0557d00d127f4e7098091631c3d16d3dd8106820c42297fccf1ba612",
+  "source_sha256": {
+    "data/dataset.json": "5cb92607287946c6b35dda3a2697514e5a6eb5a13896b9fa773b267bec2b03db",
+    "data/observations.npz": "c1cc3b9467abe7e76f1dc84225fc2c9b64ac68d64b87c2f860e4832a43266444",
+    "data/truth.npz": "3286c8e131c92e25ba96007ea94c338e23b3c13b38e5b5756aee055e43adf453",
+    "result/solution.npz": "8b766732526f16daad52108b07cf8f18ef4c7379436b09c4e3992602ffb216c4",
+    "report/check.json": "01bc1afc4ced1f5440a70e3910d8db00455f86b57997aba10f681d9601238230"
+  },
+  "config": {
+    "cadence_days": 1.0,
+    "continuum_background": 10.0,
+    "delay_max_days": 15.0,
+    "delay_step_days": 1.0,
+    "dimension": 2,
+    "duration_days": 60.0,
+    "family": "tilted_gaussian",
+    "line_background": 5.0,
+    "missing_fraction": 0.0,
+    "n_velocity": 9,
+    "noise_fraction": 0.05,
+    "psd_beta": 1.5,
+    "schema_version": 1,
+    "seed": 731,
+    "velocity_max_kms": 3000.0
+  },
+  "checks": {
+    "floating_default_stability": "WARN",
+    "forward_consistency": "PASS",
+    "integrity": "PASS",
+    "numerical_convergence": "PASS"
+  },
+  "optimizer_history_warning": "At least one optimizer call reported failure; final stationarity is assessed independently",
+  "truth_metrics": {
+    "lag_centroid_error_days": -0.07695976470778554,
+    "raw_nmse": 0.017208883107537182,
+    "recovered_area": 0.9984096554305435,
+    "shape_nmse": 0.017177000260232875,
+    "true_area": 1.0,
+    "velocity_centroid_error_kms": 0.8196319165629546
+  },
+  "new_generation_or_optimization": false,
+  "source_files_unchanged": true,
+  "rendering": "Matplotlib; nearest-neighbor cells; true/recovered maps share vmin=0 and vmax.",
+  "reproduce": "python tools/render_readme_preview.py --example <extracted-bundle>/examples/2D --out docs/assets",
+  "image_sha256": "0a4c472d03cc0b83c19aa5b24cc9e35fec1fcfe4a49bf58fa05f772c1dba40b8"
+}

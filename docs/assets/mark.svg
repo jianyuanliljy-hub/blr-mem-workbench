@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">BLR MEM Workbench</title>
+  <desc id="desc">An orbit and two delayed light curves on a dark blue tile.</desc>
+  <rect x="2" y="2" width="92" height="92" rx="26" fill="#13243A"/>
+  <ellipse cx="48" cy="47" rx="30" ry="19" transform="rotate(-34 48 47)" fill="none" stroke="#7694B6" stroke-width="1.5" opacity=".65"/>
+  <path d="M15 43H25L30 33L37 55L44 27L51 47H59" fill="none" stroke="#65D6C5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M37 66H47L52 56L59 78L66 50L73 70H81" fill="none" stroke="#80A9FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="72" cy="23" r="4" fill="#65D6C5"/>
+</svg>

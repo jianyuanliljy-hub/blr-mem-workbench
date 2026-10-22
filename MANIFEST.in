@@ -1,4 +1,4 @@
-include README.md NOTICE.md CITATION.cff pyproject.toml provenance.json .gitignore
+include README.md README_EN.md CONTRIBUTING.md NOTICE.md CITATION.cff pyproject.toml provenance.json .gitignore
 include blr_rm_windows.spec
 include blr_rm_macos.spec
 include requirements-tested-*.txt
@@ -9,8 +9,9 @@ recursive-include src *.py
 recursive-include tests *.py
 recursive-include tools *.py
 recursive-include tools *.c
-recursive-include docs *.md *.png *.csv *.json *.xml
+recursive-include docs *.md *.png *.svg *.csv *.json *.xml
 recursive-include .github/workflows *.yml
+recursive-include .github/ISSUE_TEMPLATE *.yml
 prune evidence
 prune deliverables
 prune .venv

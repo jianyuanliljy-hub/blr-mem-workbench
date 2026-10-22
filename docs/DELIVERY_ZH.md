@@ -43,4 +43,4 @@ Mac 应用使用临时签名，未经过 Developer ID 签名或 Apple 公证。�
 
 本轮低响应诊断显示：二维低响应区总响应量中位数约占 0.41%，对均方对数默认变化的贡献中位数约 84.3%。这解释了部分警告来源，不能据此删除警告或证明强响应区域不再变化。
 
-源码、文档和选定检查收据通过 [私有 GitHub 仓库](https://github.com/jianyuanliljy-hub/blr-mem-workbench) 交付，Windows / Mac 程序及源码 ZIP 在 [v0.1.0-dev1-r1 预览版](https://github.com/jianyuanliljy-hub/blr-mem-workbench/releases/tag/v0.1.0-dev1-r1) 下载。`r1` 为源码交付修订：报告测试显式用 UTF-8 读取中文，并补充 GitHub 检查记录；应用版本仍为 `0.1.0.dev1`，两个程序 ZIP 保持原样。二进制包保留构建时的文档快照，Git 仓库提供更新后的分发信息；程序算法与默认科学参数一致。历史代码的作者与公开许可证仍由项目负责人确认。
+源码、文档和选定检查收据通过 [GitHub 仓库](https://github.com/jianyuanliljy-hub/blr-mem-workbench) 交付，Windows / Mac 程序及源码 ZIP 在 [v0.1.0-dev1-r1 预览版](https://github.com/jianyuanliljy-hub/blr-mem-workbench/releases/tag/v0.1.0-dev1-r1) 下载。`r1` 为源码交付修订：报告测试显式用 UTF-8 读取中文，并补充 GitHub 检查记录；应用版本仍为 `0.1.0.dev1`，两个程序 ZIP 保持原样。仓库现已公开可见；二进制包和历史收据保留交付时的快照，Git 仓库提供更新后的分发信息。程序算法与默认科学参数一致。历史代码的作者与公开许可证仍由项目负责人确认。

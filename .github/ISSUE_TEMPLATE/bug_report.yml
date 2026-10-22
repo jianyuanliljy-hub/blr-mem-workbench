@@ -1,0 +1,41 @@
+name: 问题反馈 · Bug report
+description: 报告启动、界面、命令行或结果检测问题。
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 程序版本 · Version
+      placeholder: 0.1.0.dev1
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 系统与运行方式 · Environment
+      placeholder: Windows 11 x64，便携 ZIP / macOS arm64 / Python 源码
+    validations:
+      required: true
+  - type: dropdown
+    id: dimension
+    attributes:
+      label: 维度 · Dimension
+      options:
+        - 1D
+        - 2D
+        - 启动前 / Not applicable
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 怎样复现 · Steps and configuration
+      description: 提供最小配置和操作步骤，尽量使用小型合成数据。请勿上传私人数据或凭据。
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 预期与实际结果 · Expected and actual behavior
+      description: 附完整错误信息、检测状态或截图；请保留 WARN。
+    validations:
+      required: true
