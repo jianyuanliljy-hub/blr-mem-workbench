@@ -1,13 +1,16 @@
 {
-  "kind": "readme_illustration_of_existing_synthetic_result",
+  "kind": "readme_copy_of_existing_report_figure",
   "source": "Windows/macOS 0.1.0.dev1 bundle / examples/2D",
+  "source_figure": "report/response.png",
   "observation_id": "e3d8ec9e0557d00d127f4e7098091631c3d16d3dd8106820c42297fccf1ba612",
   "source_sha256": {
     "data/dataset.json": "5cb92607287946c6b35dda3a2697514e5a6eb5a13896b9fa773b267bec2b03db",
     "data/observations.npz": "c1cc3b9467abe7e76f1dc84225fc2c9b64ac68d64b87c2f860e4832a43266444",
     "data/truth.npz": "3286c8e131c92e25ba96007ea94c338e23b3c13b38e5b5756aee055e43adf453",
+    "result/result.json": "90d094f8cdebb3d0cc4ca9092a3ed994ebc417a43bc3c8257ce59208777f022c",
     "result/solution.npz": "8b766732526f16daad52108b07cf8f18ef4c7379436b09c4e3992602ffb216c4",
-    "report/check.json": "01bc1afc4ced1f5440a70e3910d8db00455f86b57997aba10f681d9601238230"
+    "report/check.json": "01bc1afc4ced1f5440a70e3910d8db00455f86b57997aba10f681d9601238230",
+    "report/response.png": "692edd4004ad1604e0d57a0249c755a3577a0725a9e1b1e1359bb16c35e8af25"
   },
   "config": {
     "cadence_days": 1.0,
@@ -43,7 +46,8 @@
   },
   "new_generation_or_optimization": false,
   "source_files_unchanged": true,
-  "rendering": "Matplotlib; nearest-neighbor cells; true/recovered maps share vmin=0 and vmax.",
+  "image_is_unmodified_report_output": true,
+  "rendering": "Original Matplotlib four-panel report figure; shared map color scale, delay and velocity marginals.",
   "reproduce": "python tools/render_readme_preview.py --example <extracted-bundle>/examples/2D --out docs/assets",
-  "image_sha256": "e0127f3218ea9054620fb6d2e2b8acde9ca193d0644a9c7a6c466085eeff8f0a"
+  "image_sha256": "692edd4004ad1604e0d57a0249c755a3577a0725a9e1b1e1359bb16c35e8af25"
 }

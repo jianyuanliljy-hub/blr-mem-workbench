@@ -36,10 +36,10 @@
 BLR MEM Workbench brings synthetic-data generation, joint maximum-entropy inversion and independent checks into one local workflow for broad-line-region reverberation mapping. The Windows and Mac bundles include their runtimes. The graphical interface and command line share the same computation core.
 
 <p align="center">
-  <img src="docs/assets/overview.png" width="1100" alt="An actual bundled 2D synthetic example: observed continuum, true and recovered velocity–delay maps, delay marginals and separate PASS/WARN checks">
+  <img src="docs/assets/overview.png" width="1000" alt="Original program report figure: true and recovered velocity–delay maps above, delay and velocity marginal responses below">
 </p>
 
-<p align="center"><sub>Existing bundled example · 9 × 16 grid · 5% variability noise. Floating-default stability and optimizer-history warnings remain visible. <a href="docs/assets/preview.json">Source identity</a>.</sub></p>
+<p align="center"><sub>Original figure from the bundled 2D synthetic report. The maps share a color scale; lower panels show delay and velocity marginals. 9 × 16 grid, 5% variability noise. <a href="docs/assets/preview.json">Source and checks</a>.</sub></p>
 
 ## Why use it
 

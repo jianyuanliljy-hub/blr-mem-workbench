@@ -36,10 +36,10 @@
 BLR MEM Workbench 将活动星系核宽线区（broad-line region, BLR）的合成数据生成、最大熵法（maximum entropy method, MEM）反演和结果检查放在同一个本地工作台。Windows、Mac 成品自带运行环境，完整解压即可启动；界面和命令行共用一套计算核心。
 
 <p align="center">
-  <img src="docs/assets/overview.png" width="1100" alt="程序随包二维合成示例：连续谱光变、真实与恢复的速度–时延图、时延边缘响应，以及分别展示的 PASS 和 WARN 检测状态">
+  <img src="docs/assets/overview.png" width="1000" alt="程序原始报告图：上排为真实与恢复的速度–时延图，下排为时延和速度边缘响应">
 </p>
 
-<p align="center"><sub>来自随包的二维合成示例，使用既有结果绘制；9 × 16 网格，5% 变异信号噪声。默认图像稳定性与优化历史警告保留。<a href="docs/assets/preview.json">图像来源与文件哈希</a></sub></p>
+<p align="center"><sub>程序随包二维合成示例的原始报告图。上排共用色标，下排为时延与速度边缘响应；9 × 16 网格，5% 变异信号噪声。<a href="docs/assets/preview.json">图像来源与检测记录</a>。</sub></p>
 
 ## 为什么用它
 
