@@ -1,14 +1,1 @@
-{
-  "alpha_c": 200.0,
-  "alpha_lbg": 10.0,
-  "alpha_map": 1000.0,
-  "coordinate_cycles": 80,
-  "default_change_tolerance": 0.002,
-  "default_damping": 0.5,
-  "default_iterations": 6,
-  "engine": "joint_mem_2d_floating_default",
-  "optimizer_maxiter": 1200,
-  "q_gradient_threshold": 0.005,
-  "smoothness_ratio": 1.0,
-  "test_threshold": 0.0001
-}
+{"engine":"autumn_normalized_joint_mem","alpha_map":0.2,"alpha_c":1200.0,"alpha_lbg":0.02,"gradient_backend":"manual","jax_device":"cpu","jax_jit":false,"use_numba":false}
